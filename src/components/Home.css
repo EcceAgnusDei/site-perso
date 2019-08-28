@@ -1,0 +1,7 @@
+#accueil {
+  text-align: center;
+  height: 100vh;
+  background-color: turquoise;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }

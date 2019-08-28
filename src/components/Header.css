@@ -1,0 +1,11 @@
+header {
+  height: 70px;
+  width: 100%;
+  box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.5);
+  background-color: white;
+  display: flex;
+  align-items: center;
+  position: fixed; }
+  
+header .container {
+    display: flex; }

@@ -1,15 +1,16 @@
 import React from 'react';
-import ShowRoom from './ShowRoom';
+import Showroom from './Showroom';
 import projectList from './libs/projectList';
 
 function Portfolio() {
 	return (
 		<section id="portfolio">
-			<h2>Portfolio</h2>
-			<ShowRoom>
-				{projectList}
-			</ShowRoom>
-
+			<div className="container">
+				<h2>portfolio</h2>
+				<Showroom>
+					{projectList}
+				</Showroom>
+			</div>
 		</section>
 	);
 }

@@ -11,13 +11,10 @@ const list = [
 		subtitle: `OpenClassRoom`,
 		text: <React.Fragment>
 			<p>Le sujet: intégration d'une maquette imposée.</p>
-			<p>
-				Technologies employées:
-				<ul>
+				<ul>Technologies employées:
 					<li>HTML5</li>
 					<li>CSS3</li>
 				</ul>
-			</p>
 		</React.Fragment>,
 		link: 'http://mondoloni-dev.fr/webagency/',
 		img: projet1
@@ -29,13 +26,10 @@ const list = [
 			<p>Le sujet: création d'un site WordPress pour le compte de l'office
 			du tourisme de Nouméa. Contraintes: implémenter une animation en CSS pur et
 			optimisation pour le SEO.</p>
-			<p>
-				Technologies employées:
-				<ul>
+				<ul>Technologies employées:
 					<li>WordPress</li>
 					<li>CSS3</li>
 				</ul>
-			</p>
 		</React.Fragment>,
 		link: 'http://mondoloni-dev.fr/villedenoumea/',
 		img: projet2
@@ -47,15 +41,12 @@ const list = [
 			<p>Le sujet: création d'une application permettant à l'utilisateur de 
 			réserver un vélo par le biais d'une carte interactive. La programmation
 			doit se faire en orienté objet.</p>
-			<p>
-				Technologies employées:
-				<ul>
+				<ul>Technologies employées:
 					<li>HTML5</li>
 					<li>CSS3</li>
 					<li>Javascript</li>
 					<li>Leaflet</li>
 				</ul>
-			</p>
 		</React.Fragment>,
 		link: 'http://mondoloni-dev.fr/velov/',
 		img: projet3
@@ -66,13 +57,10 @@ const list = [
 		text: <React.Fragment>
 			<p>Le sujet: création d'un blog CRUD pour un écrivain avec gestion de base de données.
 			L'architecture MVC est imposée et l'emploi de framework interdit</p>
-			<p>
-				Technologies employées:
-				<ul>
+				<ul>Technologies employées:
 					<li>PHP</li>
 					<li>SQL</li>
 				</ul>
-			</p>
 		</React.Fragment>,
 		link: 'http://mondoloni-dev.fr/billetsimple/',
 		img: projet4
@@ -84,14 +72,11 @@ const list = [
 			<p>Dernier projet de la formation OpenClassRoom: figure libre. Le site que j'ai développé
 			est une application permettant de jouer au jeu de la vie de John Conway, avec la possibilité
 			d'enregister ses créations, de les publier, de les commenter, de les liker...</p>
-			<p>
-				Technologies employées:
-				<ul>
+				<ul>Technologies employées:
 					<li>PHP</li>
 					<li>SQL</li>
 					<li>Javascript</li>
 				</ul>
-			</p>
 		</React.Fragment>,
 		link: 'http://mondoloni-dev.fr/automate-cellulaire/',
 		img: projetPerso

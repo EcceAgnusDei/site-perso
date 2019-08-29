@@ -2,7 +2,7 @@ import React from 'react';
 import Article from './Article';
 import SideDrawer from './SideDrawer';
 import FullArticle from './FullArticle';
-import './showroom.css'
+import './Showroom.css'
 
 class Showroom extends React.Component {
 	constructor(props) {

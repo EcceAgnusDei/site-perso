@@ -1,5 +1,5 @@
 import React from 'react';
-import './sideDrawer.css';
+import './SideDrawer.css';
 
 function SideDrawer(props) {
 	let className = 'backdrop';

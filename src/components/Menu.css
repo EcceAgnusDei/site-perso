@@ -3,8 +3,9 @@
   display: flex;
   justify-content: space-between; }
 
-.menu-item {
-  color: black;
+.menu-item 
+{
   text-decoration: none;
-  font-size: 1.2em;
-  text-transform: uppercase; }
+  text-transform: uppercase; 
+  transition: all 100ms linear;
+}

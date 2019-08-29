@@ -1,5 +1,8 @@
-.main_links {
-  margin: auto;
-  display: flex;
-  justify-content: space-around;
-  width: 230px; }
+.main_links
+{
+	margin: auto;
+	display: flex;
+	justify-content: space-around;
+	width: 230px; 
+	text-transform: uppercase;
+}

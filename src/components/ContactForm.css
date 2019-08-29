@@ -1,18 +1,35 @@
 .contact-form
 {
 	min-width: 310px;
-	width: 33%;
+	width: 40%;
+	height: 400px;
 	display: flex;
+	justify-content: space-between;
 	flex-direction: column;
 	align-items: center;
 }
 
-.contact-form input, .contact-form textarea
+.contact-form input[type="text"], .contact-form textarea
 {
 	width: 100%;
+	padding: 3px 7px;
+	font-size: 0.8em;
+	font-family: inherit;
 }
 
 .contact-form textarea
 {
 	height: 100px;
+}
+
+label
+{
+	font-size: 0.7em;
+	display: flex;
+}
+
+button
+{
+	font-size: 1em;
+	font-family: inherit;
 }

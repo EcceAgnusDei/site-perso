@@ -1,0 +1,119 @@
+/******Base******/
+$primary: turquoise;
+$important: #FF5D0F;
+
+$black: #121212;
+$grey: #999999;
+
+html 
+{
+  scroll-behavior: smooth;
+}
+
+body 
+{
+  margin: 0; 
+  color: $black;
+  font-family: 'Proza Libre', sans-serif;
+  font-size: 1.2em;
+}
+
+li 
+{
+  list-style-type: none; 
+  list-style-position: inside;
+}
+
+ul 
+{
+  padding: 0; 
+}
+
+.container 
+{
+  width: 65%;
+  margin: auto; 
+}
+
+h1, h2, h3, h4, .title
+{
+	font-family: 'Cormorant Garamond', serif;
+	text-transform: uppercase;
+  margin-top: 0;
+}
+
+a
+{
+	text-decoration: none;
+}
+
+section
+{
+  padding-top: 70px;
+}
+
+.btn
+{
+  color: $primary;
+  padding: 3px 7px;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: 2px;
+  border: 2px $primary solid;
+  cursor: pointer;
+  margin: 12px 0;
+  display: block;
+  transition: all 200ms linear;
+}
+
+.btn:hover
+{
+  background-color: $primary;
+  @if (lightness($primary) < 60%)
+  {
+    color: white;
+  }
+  @else
+  {
+    color: black;
+  }
+  transition: all 200ms linear;
+}
+
+// input, textarea
+// {
+//   font-family: 'Proza Libre', sans-serif;
+// }
+
+
+/*****Theme*****/
+.menu-item
+{
+  color: $black;
+}
+
+.menu-item:hover
+{
+	color: $primary;
+}
+
+a
+{
+	color: blue;
+}
+
+#accueil
+{
+  background-color: lightgrey;
+}
+
+.separator
+{
+  background-color: $primary;
+}
+
+// .full_article .picture
+// {
+//   border: 2px $primary solid;
+//   border-radius: 2px;
+// }

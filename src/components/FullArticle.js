@@ -17,13 +17,13 @@ function FullArticle(props) {
 	}
 
 	return (
-		<div className="full_article">
-			<div className="full_article-title">{title} - {subtitle}</div>
-			<div className="full_article-content">{text}</div>
+		<div className="full_article container">
+			<div className="title">{title} - {subtitle}</div>
+			<div className="paragraph">{text}</div>
 			{img &&
-			<PictureContainer width='75%' height='100%' url={img}/>}
+			<PictureContainer width='100%' height='70%' url={img}/>}
 			{link.length > 0 && 
-			<a href={link} onClick={linkHandler}>Voir</a>}		
+			<a href={link} className="btn" onClick={linkHandler}>Voir</a>}		
 		</div>
 	);
 }

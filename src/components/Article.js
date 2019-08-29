@@ -1,6 +1,7 @@
 import React from 'react';
 import './Article.css';
 import PictureContainer from './PictureContainer';
+import Separator from './Separator';
 
 function Article(props) {
 	const {title, subtitle, img} = props;
@@ -12,7 +13,7 @@ function Article(props) {
 					<div className="title">
 						{title}
 					</div>
-					<div className="separator" />
+					<Separator />
 					<div className="subtitle">
 						{subtitle}
 					</div>

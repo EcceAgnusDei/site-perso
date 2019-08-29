@@ -67,7 +67,7 @@ class ContactForm extends Component {
 					/>En soumettant ce formulaire, j'accepte que les informations 
 					saisies soient utilisées pour me recontacter.
 				</label>
-				<button>Envoyer</button>
+				<button className="btn">Envoyer</button>
 			</form>
 		);
 	}

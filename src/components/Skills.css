@@ -2,3 +2,34 @@
 {
 	display: flex;
 }
+
+.technical_skills
+{
+	margin-right: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.globalSkills-container:first-child
+{
+	margin-bottom: 33px;
+}
+
+.globalSkills-item
+{
+	margin-top: 7px;
+}
+
+.technical_skills .body
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex: 1;
+}
+
+.technical_skills h3
+{
+	white-space: nowrap;
+}

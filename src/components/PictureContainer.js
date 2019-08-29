@@ -13,7 +13,7 @@ function PictureContainer(props) {
 	};
 
 	return (
-		<div style={style}>
+		<div className="picture" style={style}>
 			{props.children}
 		</div>
 	);

@@ -5,6 +5,11 @@ $important: #FF5D0F;
 $black: #121212;
 $grey: #999999;
 
+$small: 560px;
+$medium: 760px;
+$large: 960px;
+$xLarge: 1700px;
+
 html 
 {
   scroll-behavior: smooth;
@@ -31,7 +36,7 @@ ul
 
 .container 
 {
-  width: 65%;
+  width: $large;
   margin: auto; 
 }
 
@@ -80,6 +85,11 @@ section
   transition: all 200ms linear;
 }
 
+.burger-btn
+{
+  display: none;
+}
+
 // input, textarea
 // {
 //   font-family: 'Proza Libre', sans-serif;
@@ -112,8 +122,73 @@ a
   background-color: $primary;
 }
 
-// .full_article .picture
-// {
-//   border: 2px $primary solid;
-//   border-radius: 2px;
-// }
+@media (mix-width: $xLarge)
+{
+  .container
+  {
+    width: 65%;
+  }
+}
+
+@media (max-width: $large)
+{
+  .container
+  {
+    width: 98%;
+  }
+}
+
+@media (max-width: $medium)
+{
+  body
+  {
+    font-size: 0.9em;
+  }
+
+  #competences
+  {
+    .body
+    {
+      flex-direction: column;
+    }
+
+    .globalSkills-container:first-child
+    {
+      margin-top: 33px;
+    }
+  }
+}
+
+@media (max-width: $small)
+{
+  .burger-btn
+  {
+    display: flex;
+
+    .burger-bar
+    {
+      background-color: $primary;
+    }
+  }
+
+  #contact
+  {
+    .body
+    {
+      flex-direction: column;
+    }
+
+    .contact-form
+    {
+      margin: auto;
+    }
+  }
+
+  #apropos
+  {
+    .body
+    {
+      flex-direction: column;
+    }
+  }
+}

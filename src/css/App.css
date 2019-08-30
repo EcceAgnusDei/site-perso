@@ -16,7 +16,7 @@ ul {
   padding: 0; }
 
 .container {
-  width: 65%;
+  width: 960px;
   margin: auto; }
 
 h1, h2, h3, h4, .title {
@@ -47,6 +47,9 @@ section {
   color: white;
   transition: all 200ms linear; }
 
+.burger-btn {
+  display: none; }
+
 /*****Theme*****/
 .menu-item {
   color: #121212; }
@@ -62,5 +65,33 @@ a {
 
 .separator {
   background-color: #38afbc; }
+
+@media (mix-width: 1700px) {
+  .container {
+    width: 65%; } }
+@media (max-width: 960px) {
+  .container {
+    width: 98%; } }
+@media (max-width: 760px) {
+  body {
+    font-size: 0.9em; }
+
+  #competences .body {
+    flex-direction: column; }
+  #competences .globalSkills-container:first-child {
+    margin-top: 33px; } }
+@media (max-width: 560px) {
+  .burger-btn {
+    display: flex; }
+    .burger-btn .burger-bar {
+      background-color: #38afbc; }
+
+  #contact .body {
+    flex-direction: column; }
+  #contact .contact-form {
+    margin: auto; }
+
+  #apropos .body {
+    flex-direction: column; } }
 
 /*# sourceMappingURL=App.css.map */

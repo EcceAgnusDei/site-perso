@@ -71,7 +71,7 @@ const list = [
 		text: <React.Fragment>
 			<p>Dernier projet de la formation OpenClassRoom: figure libre. Le site que j'ai développé
 			est une application permettant de jouer au jeu de la vie de John Conway, avec la possibilité
-			d'enregister ses créations, de les publier, de les commenter, de les liker...</p>
+			d'enregistrer ses créations, de les publier, de les commenter, de les liker...</p>
 				<ul>Technologies employées:
 					<li>PHP</li>
 					<li>SQL</li>

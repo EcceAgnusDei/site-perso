@@ -9,17 +9,33 @@ class ContactForm extends Component {
 			email: '',
 			phoneNumber: '',
 			message: '',
-			legal: false,
+			legal: false
 		};
 	}
 
 	handleSubmit = (event) => {
 		event.preventDefault();
+		const {name, email, phoneNumber, message} = event.target;
+
+		fetch(`/API/contactMail.php`, {
+			method: 'POST',
+			body: JSON.stringify([name.value, email.value, phoneNumber.value, message.value])
+		})
+		.then(() => {
+			alert('Message Envoyé');
+			this.setState({
+				name: '',
+				email: '',
+				phoneNumber: '',
+				message: '',
+				legal: false
+			});
+		});
 	}
 
 	handleChange = (event) => {
 		// const {name, value, type, checked} = event.target
-  //       type === "checkbox" ? this.setState({ [name]: checked }) : this.setState({ [name]: value })
+  // 		type === "checkbox" ? this.setState({ [name]: checked }) : this.setState({ [name]: value })
 	}
 	
 	render() {
@@ -32,6 +48,7 @@ class ContactForm extends Component {
 					placeholder="Nom et Prénom" 
 					aria-label="Nom"
 					onChange={this.handleChange}
+					value={this.state.name}
 					required
 				/>
 				<input 
@@ -40,6 +57,7 @@ class ContactForm extends Component {
 					placeholder="E-mail" 
 					aria-label="email"
 					onChange={this.handleChange}
+					value={this.state.email}
 					required
 				/>
 				<input 
@@ -48,13 +66,14 @@ class ContactForm extends Component {
 					placeholder="Téléphone" 
 					aria-label="téléphone"
 					onChange={this.handleChange}
-					required
+					value={this.state.phoneNumber}
 				/>
 				<textarea
-					name="phoneNumber" 
+					name="message" 
 					placeholder="Méssage" 
 					aria-label="message"
 					onChange={this.handleChange}
+					value={this.state.message}
 					required
 				/>
 				<label>

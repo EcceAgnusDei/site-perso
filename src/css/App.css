@@ -31,19 +31,19 @@ section {
   padding-top: 70px; }
 
 .btn {
-  color: turquoise;
+  color: #38afbc;
   padding: 3px 7px;
   white-space: nowrap;
   background-color: transparent;
   border-radius: 2px;
-  border: 2px turquoise solid;
+  border: 2px #38afbc solid;
   cursor: pointer;
   margin: 12px 0;
   display: block;
   transition: all 200ms linear; }
 
 .btn:hover {
-  background-color: turquoise;
+  background-color: #38afbc;
   color: white;
   transition: all 200ms linear; }
 
@@ -52,15 +52,15 @@ section {
   color: #121212; }
 
 .menu-item:hover {
-  color: turquoise; }
+  color: #38afbc; }
 
 a {
-  color: blue; }
+  color: #38afbc; }
 
 #accueil {
   background-color: lightgrey; }
 
 .separator {
-  background-color: turquoise; }
+  background-color: #38afbc; }
 
 /*# sourceMappingURL=App.css.map */

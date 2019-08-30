@@ -1,5 +1,5 @@
 /******Base******/
-$primary: turquoise;
+$primary: #38afbc;
 $important: #FF5D0F;
 
 $black: #121212;
@@ -99,7 +99,7 @@ section
 
 a
 {
-	color: blue;
+	color: $primary;
 }
 
 #accueil

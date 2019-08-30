@@ -1,0 +1,30 @@
+.footer-top
+{
+	background-color: #555555;
+	height: 50px;
+}
+
+.footer-bottom
+{
+	background-color: #333333;
+	height: 80px;
+}
+
+footer .container
+{
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+footer
+{
+	color: #BBBBBB;
+	margin-top: 50px;
+}
+
+footer a
+{
+	color: inherit;
+}

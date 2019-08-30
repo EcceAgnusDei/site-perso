@@ -8,7 +8,7 @@ function ScaledSkills(props) {
 	const langagesJSX = props.children.map(item => 
 		<div key={item.nom}>
 			<p style={style}>{item.nom}</p>
-			<Scale level={item.niveau} color='turquoise'/>
+			<Scale level={item.niveau} color='#38afbc'/>
 		</div>
 	)
 	return (

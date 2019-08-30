@@ -15,17 +15,20 @@
 	padding: 3px 7px;
 	font-size: 0.8em;
 	font-family: inherit;
+	box-sizing: border-box;
 }
 
 .contact-form textarea
 {
 	height: 100px;
+	resize: none;
 }
 
 label
 {
 	font-size: 0.7em;
 	display: flex;
+	color: #777777;
 }
 
 button

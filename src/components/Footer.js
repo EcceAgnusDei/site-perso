@@ -1,13 +1,20 @@
 import React from 'react';
 import MainLinks from './MainLinks'
+import './Footer.css';
 
 function Footer() {
 	return (
 		<footer>
-			<MainLinks />
-			<div className="footer-legal">
-				<div>&copy;Antoine Mondoloni 2019</div>
-				<a href="http://mondoloni-dev.fr/legal/legalNotice.html">mentions légales</a>
+			<div className="footer-top">
+				<div className="container">
+					<MainLinks />
+				</div>
+			</div>
+			<div className="footer-bottom">
+				<div className="container">
+					<div>&copy;Antoine Mondoloni 2019</div>
+					<a href="http://mondoloni-dev.fr/legal/legalNotice.html">Mentions légales</a>
+				</div>
 			</div>
 		</footer>
 	);

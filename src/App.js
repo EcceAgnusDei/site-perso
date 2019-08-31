@@ -7,7 +7,9 @@ import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import SideDrawer from './components/SideDrawer';
+import ParallaxContainer from './components/ParallaxContainer';
 import Menu from './components/Menu';
+import background from './background.jpg';
 import projectList from './components/libs/projectList';
 import './css/App.css';
 
@@ -45,7 +47,9 @@ class App extends Component {
 				{this.state.drawerContent}
 				</SideDrawer>
 		    	<Header burgerClick={this.drawe}/>
-		    	<Home />
+		    	<ParallaxContainer img={background}>
+		    		<Home />
+		    	</ParallaxContainer>
 		    	<AboutMe />
 		    	<Skills />
 		    	<Portfolio articleClickHandler={this.drawe}>

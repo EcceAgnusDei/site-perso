@@ -61,10 +61,13 @@ a {
   color: #38afbc; }
 
 #accueil {
-  background-color: lightgrey; }
+  background-color: rgba(255, 255, 255, 0.7); }
 
 .separator {
   background-color: #38afbc; }
+
+.title-container {
+  color: #121212; }
 
 @media (mix-width: 1700px) {
   .container {

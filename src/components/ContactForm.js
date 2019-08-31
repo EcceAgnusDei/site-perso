@@ -34,14 +34,13 @@ class ContactForm extends Component {
 	}
 
 	handleChange = (event) => {
-		// const {name, value, type, checked} = event.target
-  // 		type === "checkbox" ? this.setState({ [name]: checked }) : this.setState({ [name]: value })
+		const {name, value, type, checked} = event.target;
+  		type === "checkbox" ? this.setState({ [name]: checked }) : this.setState({ [name]: value });
 	}
 	
 	render() {
 		return (
 			<form onSubmit={this.handleSubmit} className="contact-form">
-				Pour l'instant, le formulaire n'est pas fonctionnel.
 				<input 
 					type="text" 
 					name="name" 

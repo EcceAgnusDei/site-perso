@@ -1,7 +1,7 @@
-import projet1 from './projectImg/projet1.png';
-import projet2 from './projectImg/projet2.png';
-import projet3 from './projectImg/projet3.png';
-import projet4 from './projectImg/projet4.png';
+import projet1 from './projectImg/projet1.jpg';
+import projet2 from './projectImg/projet2.jpg';
+import projet3 from './projectImg/projet3.jpg';
+import projet4 from './projectImg/projet4.jpg';
 import projetPerso from './projectImg/projet_perso.png';
 import React from 'react'
 

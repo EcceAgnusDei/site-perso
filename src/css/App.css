@@ -81,6 +81,9 @@ a {
   #competences .globalSkills-container:first-child {
     margin-top: 33px; } }
 @media (max-width: 560px) {
+  header .menu {
+    display: none; }
+
   .burger-btn {
     display: flex; }
     .burger-btn .burger-bar {

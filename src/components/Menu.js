@@ -33,7 +33,7 @@ function Menu(props) {
 		</li>
 	)
 	return (
-		<ul className="menu">
+		<ul className={props.vertical ? "menu vertical" : "menu"}>
 			{menuJSX}
 		</ul>
 	);

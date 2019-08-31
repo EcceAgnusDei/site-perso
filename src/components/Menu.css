@@ -3,6 +3,21 @@
   display: flex;
   justify-content: space-between; }
 
+.vertical
+{
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	align-items: center;
+	justify-content: center;
+}
+
+.vertical li
+{
+	margin: 24px 0;
+}
+
 .menu-item 
 {
   text-decoration: none;

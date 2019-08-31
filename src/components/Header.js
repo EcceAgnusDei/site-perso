@@ -9,7 +9,15 @@ function Header(props) {
 			<div className="container">
 			{props.logo &&
 				<img src={props.logo} className="logo"/>}
-				<BurgerButton />
+				<BurgerButton click={() => props.burgerClick(
+					<Menu vertical>
+				        <li>accueil</li>
+				        <li>à propos</li>
+				        <li>compétences</li>
+				        <li>portfolio</li>
+				        <li>contact</li>
+					</Menu>
+				)}/>
 				<Menu>
 			        <li>accueil</li>
 			        <li>à propos</li>

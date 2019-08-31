@@ -15,7 +15,7 @@ function BurgerButton(props) {
 		width: btnStyle.width
 	}
 	return (
-		<button className="burger-btn" onClick={props.burgerClick} style={btnStyle}>
+		<button className="burger-btn" onClick={props.click} style={btnStyle}>
 			<div className="burger-bar" style={barStyle}/>
 			<div className="burger-bar" style={barStyle}/>
 			<div className="burger-bar" style={barStyle}/>

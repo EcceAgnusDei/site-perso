@@ -37,3 +37,18 @@
 	font-size: 1em;
 	font-family: inherit;
 }
+
+.contact-form .required_input
+{
+	display: flex;
+	width: 100%;
+}
+
+.star
+{
+	width: 33px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

@@ -22,7 +22,7 @@ const about = [(
 	<React.Fragment>
 		<h3>Et depuis?</h3>
 		<p>Depuis ma soif d'apprendre m'a amené à approfondir les outils de développement comme <strong>React.js</strong>,
-		avec lequel j'ai refais entière mon projet libre de fin de parcours de formation, 
+		avec lequel j'ai refait entière mon projet libre de fin de parcours de formation, 
 		accessible depuis le <a href="#portfolio">portefolio</a>. Toujours partant pour améliorer mon savoir
 		faire et découvrir de nouveaux outils,
 		je continue d'explorer l'univers du développement web...</p>

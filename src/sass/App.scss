@@ -128,6 +128,11 @@ a
   color: $black;
 }
 
+.star
+{
+  background-color: $light;
+}
+
 @media (mix-width: $xLarge)
 {
   .container

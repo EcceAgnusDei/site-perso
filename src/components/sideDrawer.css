@@ -23,3 +23,11 @@
 {
 	transform: translateX(0);
 }
+
+@media (max-width: 560px)
+{
+	.side_drawer
+	{
+		width: 90%;
+	}
+}

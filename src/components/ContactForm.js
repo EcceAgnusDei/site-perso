@@ -41,24 +41,30 @@ class ContactForm extends Component {
 	render() {
 		return (
 			<form onSubmit={this.handleSubmit} className="contact-form">
-				<input 
-					type="text" 
-					name="name" 
-					placeholder="Nom et Prénom" 
-					aria-label="Nom"
-					onChange={this.handleChange}
-					value={this.state.name}
-					required
-				/>
-				<input 
-					type="text" 
-					name="email" 
-					placeholder="E-mail" 
-					aria-label="email"
-					onChange={this.handleChange}
-					value={this.state.email}
-					required
-				/>
+				<div className="required_input">
+					<input 
+						type="text" 
+						name="name" 
+						placeholder="Nom et Prénom" 
+						aria-label="Nom"
+						onChange={this.handleChange}
+						value={this.state.name}
+						required
+					/>
+					<div className="star">*</div>
+				</div>
+				<div className="required_input">
+					<input 
+						type="text" 
+						name="email" 
+						placeholder="E-mail" 
+						aria-label="email"
+						onChange={this.handleChange}
+						value={this.state.email}
+						required
+					/>
+					<div className="star">*</div>
+				</div>
 				<input 
 					type="text" 
 					name="phoneNumber" 
@@ -67,14 +73,17 @@ class ContactForm extends Component {
 					onChange={this.handleChange}
 					value={this.state.phoneNumber}
 				/>
-				<textarea
-					name="message" 
-					placeholder="Méssage" 
-					aria-label="message"
-					onChange={this.handleChange}
-					value={this.state.message}
-					required
-				/>
+				<div className="required_input">
+					<textarea
+						name="message" 
+						placeholder="Méssage" 
+						aria-label="message"
+						onChange={this.handleChange}
+						value={this.state.message}
+						required
+					/>
+					<div className="star">*</div>
+				</div>
 				<label>
 					<input 
 						type="checkbox" 

@@ -2,7 +2,7 @@ const listeCompetences = [
 	{
 		titre: `Dévoué dans le travail`,
 		text: `Le devoir d'exercer son métier avec sérieux et application 
-		(dans la rigolade et la bonne ambiance bien entendu).`
+		(dans la décontraction et la bonne ambiance bien entendu).`
 	},
 	{
 		titre: `Autodidacte`,

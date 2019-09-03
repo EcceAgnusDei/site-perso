@@ -72,6 +72,9 @@ a {
 .star {
   background-color: #EEEEEE; }
 
+.current {
+  color: #38afbc; }
+
 @media (mix-width: 1700px) {
   .container {
     width: 65%; } }

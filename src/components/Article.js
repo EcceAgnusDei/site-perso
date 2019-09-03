@@ -5,7 +5,7 @@ import FullArticle from './FullArticle';
 import Separator from './Separator';
 
 function Article(props) {
-	const {title, subtitle, img, text, link} = props;
+	const {title, subtitle, img, text, link, imgMin} = props;
 
 	return (
 		<div className="article" onClick={() => props.click(
@@ -17,7 +17,7 @@ function Article(props) {
 				img={img}
 			/>
 		)}>
-			<PictureContainer url={img}>
+			<PictureContainer url={imgMin}>
 				<div className="content">
 					<div className="title">
 						{title}

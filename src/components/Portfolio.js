@@ -9,6 +9,7 @@ function Portfolio(props) {
 			title={item.title}
 			subtitle={item.subtitle}
 			img={item.img}
+			imgMin={item.imgMin}
 			text={item.text}
 			link={item.link}
 			key={item.title} 

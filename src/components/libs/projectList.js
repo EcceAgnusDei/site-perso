@@ -2,7 +2,14 @@ import projet1 from './projectImg/projet1.jpg';
 import projet2 from './projectImg/projet2.jpg';
 import projet3 from './projectImg/projet3.jpg';
 import projet4 from './projectImg/projet4.jpg';
-import projetPerso from './projectImg/projet_perso.png';
+import projetPerso from './projectImg/projet_perso.jpg';
+import projetPersoReact from './projectImg/projet_perso_react.jpg';
+import projet1Min from './projectImg/projet1.min.jpg';
+import projet2Min from './projectImg/projet2.min.jpg';
+import projet3Min from './projectImg/projet3.min.jpg';
+import projet4Min from './projectImg/projet4.min.jpg';
+import projetPersoMin from './projectImg/projet_perso.min.jpg';
+import projetPersoReactMin from './projectImg/projet_perso_react.min.jpg';
 import React from 'react'
 
 const list = [
@@ -17,7 +24,8 @@ const list = [
 				</ul>
 		</React.Fragment>,
 		link: 'http://mondoloni-dev.fr/webagency/',
-		img: projet1
+		img: projet1,
+		imgMin: projet1Min
 	},
 	{
 		title: 'Projet 2',
@@ -32,7 +40,8 @@ const list = [
 				</ul>
 		</React.Fragment>,
 		link: 'http://mondoloni-dev.fr/villedenoumea/',
-		img: projet2
+		img: projet2,
+		imgMin: projet2Min
 	},
 	{
 		title: 'Projet 3',
@@ -49,7 +58,8 @@ const list = [
 				</ul>
 		</React.Fragment>,
 		link: 'http://mondoloni-dev.fr/velov/',
-		img: projet3
+		img: projet3,
+		imgMin: projet3Min
 	},
 	{
 		title: 'Projet 4',
@@ -63,10 +73,11 @@ const list = [
 				</ul>
 		</React.Fragment>,
 		link: 'http://mondoloni-dev.fr/billetsimple/',
-		img: projet4
+		img: projet4,
+		imgMin: projet4Min
 	},
 	{
-		title: 'Projet Personnel',
+		title: 'Jeu de la vie',
 		subtitle: `OpenClassRoom`,
 		text: <React.Fragment>
 			<p>Dernier projet de la formation OpenClassRoom: figure libre. Le site que j'ai développé
@@ -79,8 +90,25 @@ const list = [
 				</ul>
 		</React.Fragment>,
 		link: 'http://mondoloni-dev.fr/automate-cellulaire/',
-		img: projetPerso
-	}
+		img: projetPerso,
+		imgMin: projetPersoMin
+	},
+	{
+		title: 'Jeu de la vie - React',
+		subtitle: `Personnel`,
+		text: <React.Fragment>
+			<p>Refactorisation complète du dernier projet de la formation OpenClassRoom. La partie
+			client est désormais développée en react, les Api sont codées en PHP.</p>
+				<ul>Technologies employées:
+					<li>React.js</li>
+					<li>PHP</li>
+					<li>SQL</li>
+				</ul>
+		</React.Fragment>,
+		link: 'http://mondoloni-dev.fr/jeu-de-la-vie/',
+		img: projetPersoReact,
+		imgMin: projetPersoReactMin
+	},
 ];
 
 export default list;

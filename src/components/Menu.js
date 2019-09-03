@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Menu.css';
 
 String.prototype.sansAccent = function(){
@@ -22,16 +22,21 @@ String.prototype.sansAccent = function(){
 }
 
 function Menu(props) {
-	const menuJSX = props.children.map(item => 
+	const [activePage, setActivePage] = useState('accueil');
+	const menuJSX = props.children.map(item => {
+		const id = item.props.children.replace(/ /g, "").sansAccent();
+		return (
 		<li key={item.props.children}>
 			<a 
-				className="menu-item" 
-				href={`#${item.props.children.replace(/ /g, "").sansAccent()}`}
+				className={activePage === id ? "menu-item current" : "menu-item"}
+				href={`#${id}`}
+				onClick={() => setActivePage(id)}
 			>
 				{item.props.children}
 			</a>
 		</li>
-	)
+		)
+	})
 	return (
 		<ul className={props.vertical ? "menu vertical" : "menu"}>
 			{menuJSX}

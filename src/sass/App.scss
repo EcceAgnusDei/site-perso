@@ -133,6 +133,11 @@ a
   background-color: $light;
 }
 
+.current
+{
+  color: $primary;
+}
+
 @media (mix-width: $xLarge)
 {
   .container

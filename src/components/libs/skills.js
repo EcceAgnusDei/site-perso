@@ -12,6 +12,10 @@ const listeLangages = [
 		niveau: 6
 	},
 	{
+		nom: 'Redux',
+		niveau: 6
+	},
+	{
 		nom: 'PHP',
 		niveau: 5
 	},

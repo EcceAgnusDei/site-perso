@@ -23,7 +23,7 @@ const list = [
 					<li>CSS3</li>
 				</ul>
 		</React.Fragment>,
-		link: 'http://mondoloni-dev.fr/webagency/',
+		link: 'https://mondoloni-dev.fr/webagency/',
 		img: projet1,
 		imgMin: projet1Min
 	},
@@ -39,7 +39,7 @@ const list = [
 					<li>CSS3</li>
 				</ul>
 		</React.Fragment>,
-		link: 'http://mondoloni-dev.fr/villedenoumea/',
+		link: 'https://mondoloni-dev.fr/villedenoumea/',
 		img: projet2,
 		imgMin: projet2Min
 	},
@@ -57,7 +57,7 @@ const list = [
 					<li>Leaflet</li>
 				</ul>
 		</React.Fragment>,
-		link: 'http://mondoloni-dev.fr/velov/',
+		link: 'https://mondoloni-dev.fr/velov/',
 		img: projet3,
 		imgMin: projet3Min
 	},
@@ -72,7 +72,7 @@ const list = [
 					<li>SQL</li>
 				</ul>
 		</React.Fragment>,
-		link: 'http://mondoloni-dev.fr/billetsimple/',
+		link: 'https://mondoloni-dev.fr/billetsimple/',
 		img: projet4,
 		imgMin: projet4Min
 	},
@@ -89,7 +89,7 @@ const list = [
 					<li>Javascript</li>
 				</ul>
 		</React.Fragment>,
-		link: 'http://mondoloni-dev.fr/automate-cellulaire/',
+		link: 'https://mondoloni-dev.fr/automate-cellulaire/',
 		img: projetPerso,
 		imgMin: projetPersoMin
 	},
@@ -98,14 +98,14 @@ const list = [
 		subtitle: `Personnel`,
 		text: <React.Fragment>
 			<p>Refactorisation complète du dernier projet de la formation OpenClassRoom. La partie
-			client est désormais développée en react, les Api sont codées en PHP.</p>
+			client est désormais développée en react (functional components uniquement), les Api sont codées en PHP.</p>
 				<ul>Technologies employées:
-					<li>React.js</li>
+					<li>React.js (hooks)</li>
 					<li>PHP</li>
 					<li>SQL</li>
 				</ul>
 		</React.Fragment>,
-		link: 'http://mondoloni-dev.fr/jeu-de-la-vie/',
+		link: 'https://jeu-de-la-vie.mondoloni-dev.fr/',
 		img: projetPersoReact,
 		imgMin: projetPersoReactMin
 	},

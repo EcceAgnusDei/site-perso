@@ -55,7 +55,7 @@ class ContactForm extends Component {
 				</div>
 				<div className="required_input">
 					<input 
-						type="text" 
+						type="email" 
 						name="email" 
 						placeholder="E-mail" 
 						aria-label="email"

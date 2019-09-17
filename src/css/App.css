@@ -88,7 +88,14 @@ a {
   #competences .body {
     flex-direction: column; }
   #competences .globalSkills-container:first-child {
-    margin-top: 33px; } }
+    margin-top: 33px; }
+
+  .technical_skills {
+    margin: 0; }
+    .technical_skills .body {
+      margin: auto; }
+    .technical_skills .scale {
+      justify-content: center; } }
 @media (max-width: 560px) {
   header .menu {
     display: none; }

@@ -6,6 +6,7 @@
 .technical_skills
 {
 	margin-right: 50px;
+	min-height: 500px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -23,6 +24,7 @@
 
 .technical_skills .body
 {
+	width: 340px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;

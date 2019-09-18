@@ -13,7 +13,7 @@ function Footer() {
 			<div className="footer-bottom">
 				<div className="container">
 					<div>&copy;Antoine Mondoloni 2019</div>
-					<a href="http://mondoloni-dev.fr/legal/legalNotice.html">Mentions légales</a>
+					<a href="http://mondoloni-dev.fr/legal/legalNotice.html" target="_blank" rel="noopener noreferrer">Mentions légales</a>
 				</div>
 			</div>
 		</footer>

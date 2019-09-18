@@ -4,8 +4,8 @@ import './ContactForm.css';
 import Alert from './Alert';
 
 class ContactForm extends Component {
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
 		this.state = {
 			alert: '',
 			name: '',
@@ -58,7 +58,7 @@ class ContactForm extends Component {
 	
 	render() {
 		return (
-			<React.Fragment>
+			<div class={this.props.bootstrapClass}>
 				<form onSubmit={this.handleSubmit} className="contact-form">
 					<div className="required_input">
 						<input 
@@ -124,7 +124,7 @@ class ContactForm extends Component {
 					Désolé, il y a eu un problème...
 				</Alert>}
 
-			</React.Fragment>
+			</div>
 		);
 	}
 }

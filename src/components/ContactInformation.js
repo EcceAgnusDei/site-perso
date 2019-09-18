@@ -1,9 +1,9 @@
 import React from 'react';
 import './ContactInformation.css'
 
-function ContactInformation() {
+function ContactInformation(props) {
 	return (
-		<div className="contact_info">
+		<div className={props.bootstrapClass}>
 			<div className="contact_info-item">
 				<h4>adresse</h4>
 				

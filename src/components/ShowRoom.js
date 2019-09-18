@@ -7,7 +7,7 @@ import './Showroom.css'
 function Showroom(props) {
 	return (
 		<React.Fragment>
-			<div className="showroom">
+			<div className="row">
 				{props.children}
 			</div>
 		</React.Fragment>

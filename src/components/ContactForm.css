@@ -1,7 +1,5 @@
 .contact-form
 {
-	min-width: 310px;
-	width: 40%;
 	height: 400px;
 	display: flex;
 	justify-content: space-between;

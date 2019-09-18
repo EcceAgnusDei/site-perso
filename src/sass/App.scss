@@ -1,4 +1,10 @@
 /******Base******/
+//@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/grid";
+
 $primary: #38afbc;
 $important: #FF5D0F;
 
@@ -10,6 +16,11 @@ $small: 560px;
 $medium: 760px;
 $large: 960px;
 $xLarge: 1700px;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
 
 html 
 {
@@ -35,11 +46,11 @@ ul
   padding: 0; 
 }
 
-.container 
-{
-  width: $large;
-  margin: auto;
-}
+// .container 
+// {
+//   width: $large;
+//   margin: auto;
+// }
 
 h1, h2, h3, h4, .title
 {
@@ -140,18 +151,18 @@ a
 
 @media (mix-width: $xLarge)
 {
-  .container
-  {
-    width: 65%;
-  }
+  // .container
+  // {
+  //   width: 65%;
+  // }
 }
 
 @media (max-width: $large)
 {
-  .container
-  {
-    width: 98%;
-  }
+  // .container
+  // {
+  //   width: 98%;
+  // }
 }
 
 @media (max-width: $medium)
@@ -180,7 +191,7 @@ a
 
     .body
     {
-      margin: auto;
+      width: 100%;
     }
 
     .scale
@@ -225,6 +236,11 @@ a
     .body
     {
       flex-direction: column;
+    }
+
+    .aside
+    {
+      margin: 0;
     }
   }
 }

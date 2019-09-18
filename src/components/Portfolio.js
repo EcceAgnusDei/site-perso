@@ -5,16 +5,18 @@ import Article from './Article';
 
 function Portfolio(props) {
 	const articlesJSX = props.children.map(item =>
-		<Article 
-			title={item.title}
-			subtitle={item.subtitle}
-			img={item.img}
-			imgMin={item.imgMin}
-			text={item.text}
-			link={item.link}
-			key={item.title} 
-			click={props.articleClickHandler}
-		/>
+		<div className="offset-2 offset-sm-0 col-8 col-sm-6 col-md-4 col-lg-3">
+			<Article 
+				title={item.title}
+				subtitle={item.subtitle}
+				img={item.img}
+				imgMin={item.imgMin}
+				text={item.text}
+				link={item.link}
+				key={item.title} 
+				click={props.articleClickHandler}
+			/>
+		</div>
 		);
 	return (
 		<section id="portfolio">

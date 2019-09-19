@@ -3,7 +3,8 @@ import Scale from './Scale';
 
 function ScaledSkills(props) {
 	const style = {
-		margin: 0
+		margin: 0,
+		textAlign: 'left'
 	}
 	const langagesJSX = props.children.map(item => 
 		<div key={item.nom}>

@@ -3,12 +3,12 @@ import './FullArticle.css';
 import PictureContainer from './PictureContainer';
 
 function FullArticle(props) {
-	const {title, subtitle, text, link, img} = props;
+	const {title, subtitle, text, link, img, github} = props;
 
-	const linkHandler = (event) => {
-		event.preventDefault();
-		window.open(link);
-	}
+	// const linkHandler = (event) => {
+	// 	event.preventDefault();
+	// 	window.open(link);
+	// }
 
 	const style = {
 		backgroundImage: `url(${img})`,
@@ -22,8 +22,12 @@ function FullArticle(props) {
 			<div className="paragraph">{text}</div>
 			{img &&
 			<PictureContainer width='100%' height='70%' url={img}/>}
-			{link.length > 0 && 
-			<a href={link} className="btn" onClick={linkHandler}>Voir</a>}		
+			<div class="btn-wrapper">
+				{link.length > 0 && 
+				<a href={link} className="btn" target="_blank">Le site</a>}
+				{github &&
+				<a href={github} className="btn" target="_blank">Le code</a>}
+			</div>		
 		</div>
 	);
 }

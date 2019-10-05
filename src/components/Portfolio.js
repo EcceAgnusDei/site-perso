@@ -13,6 +13,7 @@ function Portfolio(props) {
 				imgMin={item.imgMin}
 				text={item.text}
 				link={item.link}
+				github={item.github}
 				key={item.title} 
 				click={props.articleClickHandler}
 			/>

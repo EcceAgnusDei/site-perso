@@ -24,3 +24,14 @@
 {
 	list-style-type: circle;
 }
+
+.btn-wrapper
+{
+	display: flex;
+	justify-content: center;
+}
+
+.btn-wrapper a
+{
+	margin: 7px;
+}

@@ -4,12 +4,14 @@ import projet3 from './projectImg/projet3.jpg';
 import projet4 from './projectImg/projet4.jpg';
 import projetPerso from './projectImg/projet_perso.jpg';
 import projetPersoReact from './projectImg/projet_perso_react.jpg';
+import blogStrap from './projectImg/blogStrap.jpg';
 import projet1Min from './projectImg/projet1.min.jpg';
 import projet2Min from './projectImg/projet2.min.jpg';
 import projet3Min from './projectImg/projet3.min.jpg';
 import projet4Min from './projectImg/projet4.min.jpg';
 import projetPersoMin from './projectImg/projet_perso.min.jpg';
 import projetPersoReactMin from './projectImg/projet_perso_react.min.jpg';
+import blogStrapMin from './projectImg/blogStrap.min.jpg';
 import React from 'react'
 
 const list = [
@@ -25,7 +27,8 @@ const list = [
 		</React.Fragment>,
 		link: 'https://mondoloni-dev.fr/webagency/',
 		img: projet1,
-		imgMin: projet1Min
+		imgMin: projet1Min,
+		github: ''
 	},
 	{
 		title: 'Projet 2',
@@ -41,7 +44,8 @@ const list = [
 		</React.Fragment>,
 		link: 'https://mondoloni-dev.fr/villedenoumea/',
 		img: projet2,
-		imgMin: projet2Min
+		imgMin: projet2Min,
+		github: ''
 	},
 	{
 		title: 'Projet 3',
@@ -59,7 +63,8 @@ const list = [
 		</React.Fragment>,
 		link: 'https://mondoloni-dev.fr/velov/',
 		img: projet3,
-		imgMin: projet3Min
+		imgMin: projet3Min,
+		github: 'https://github.com/EcceAgnusDei/Projet-3-OCR'
 	},
 	{
 		title: 'Projet 4',
@@ -74,7 +79,8 @@ const list = [
 		</React.Fragment>,
 		link: 'https://mondoloni-dev.fr/billetsimple/',
 		img: projet4,
-		imgMin: projet4Min
+		imgMin: projet4Min,
+		github: 'https://github.com/EcceAgnusDei/Projet-4'
 	},
 	{
 		title: 'Jeu de la vie',
@@ -91,7 +97,8 @@ const list = [
 		</React.Fragment>,
 		link: 'https://mondoloni-dev.fr/automate-cellulaire/',
 		img: projetPerso,
-		imgMin: projetPersoMin
+		imgMin: projetPersoMin,
+		github: 'https://github.com/EcceAgnusDei/automate-cellulaire'
 	},
 	{
 		title: 'Jeu de la vie - React',
@@ -107,7 +114,25 @@ const list = [
 		</React.Fragment>,
 		link: 'https://jeu-de-la-vie.mondoloni-dev.fr/',
 		img: projetPersoReact,
-		imgMin: projetPersoReactMin
+		imgMin: projetPersoReactMin,
+		github: 'https://github.com/EcceAgnusDei/jeu-de-la-vie'
+	},
+	{
+		title: 'BlogStrap',
+		subtitle: `Personnel`,
+		text: <React.Fragment>
+			<p>Création from scratch d'un faut blog dont le contenu provient de l'API jsonPlaceholder. Ce site m'a permis de me familiariser 
+			avec bootstrap.</p>
+				<ul>Technologies employées:
+					<li>React.js (hooks)</li>
+					<li>Redux</li>
+					<li>Bootstrap</li>
+				</ul>
+		</React.Fragment>,
+		link: 'https://blogstrap.mondoloni-dev.fr/',
+		img: blogStrap,
+		imgMin: blogStrapMin,
+		github: 'https://github.com/EcceAgnusDei/BlogStrap'
 	},
 ];
 

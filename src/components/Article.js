@@ -5,7 +5,7 @@ import FullArticle from './FullArticle';
 import Separator from './Separator';
 
 function Article(props) {
-	const {title, subtitle, img, text, link, imgMin} = props;
+	const {title, subtitle, img, text, link, imgMin, github} = props;
 
 	return (
 		<div className="article" onClick={() => props.click(
@@ -14,6 +14,7 @@ function Article(props) {
 				subtitle={subtitle}
 				text={text}
 				link={link}
+				github={github}
 				img={img}
 			/>
 		)}>

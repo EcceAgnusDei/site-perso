@@ -819,6 +819,9 @@ a {
 .current {
   color: #38afbc; }
 
+@media (max-width: 960px) {
+  .container {
+    width: 98%; } }
 @media (max-width: 760px) {
   body {
     font-size: 0.9em; }
@@ -833,16 +836,16 @@ a {
     .technical_skills .body {
       width: 100%; }
     .technical_skills .scale {
-      justify-content: center; } }
-@media (max-width: 560px) {
+      justify-content: center; }
+
   header .menu {
     display: none; }
 
   .burger-btn {
     display: flex; }
     .burger-btn .burger-bar {
-      background-color: #38afbc; }
-
+      background-color: #38afbc; } }
+@media (max-width: 560px) {
   #contact .body {
     flex-direction: column; }
   #contact .contact-form {

@@ -19,16 +19,17 @@ const list = [
 		title: 'Projet 1',
 		subtitle: `OpenClassRoom`,
 		text: <React.Fragment>
-			<p>Le sujet: intégration d'une maquette imposée.</p>
+			<p>Le sujet: intégration d'une maquette imposée. Le projet présenté ici a été modifié pour n'employer que des classes bootstrap.</p>
 				<ul>Technologies employées:
 					<li>HTML5</li>
 					<li>CSS3</li>
+					<li>Bootstrap</li>
 				</ul>
 		</React.Fragment>,
 		link: 'https://mondoloni-dev.fr/webagency/',
 		img: projet1,
 		imgMin: projet1Min,
-		github: ''
+		github: 'https://github.com/EcceAgnusDei/OCR-Projet1-Bootstrap'
 	},
 	{
 		title: 'Projet 2',

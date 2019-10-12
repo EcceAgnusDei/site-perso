@@ -159,10 +159,10 @@ a
 
 @media (max-width: $large)
 {
-  // .container
-  // {
-  //   width: 98%;
-  // }
+  .container
+  {
+    width: 98%;
+  }
 }
 
 @media (max-width: $medium)
@@ -199,10 +199,7 @@ a
       justify-content: center;
     }
   }
-}
 
-@media (max-width: $small)
-{
   header .menu
   {
     display: none;
@@ -217,7 +214,10 @@ a
       background-color: $primary;
     }
   }
+}
 
+@media (max-width: $small)
+{
   #contact
   {
     .body

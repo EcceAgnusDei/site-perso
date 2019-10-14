@@ -12,11 +12,11 @@ function Tools(props) {
 		<section id="competences">
 			<div className="container">
 				<h2>compétences</h2>
-				<div className="body">
+				<div className="row">
 					<ScaledSkills title="Compétences techniques">
 						{skillsList}
 					</ScaledSkills>
-					<div className="global_skills">
+					<div className="global_skills col-12 col-md-6">
 						<GlobalSkills title="Savoir faire">
 							{hardSkills}
 						</GlobalSkills>

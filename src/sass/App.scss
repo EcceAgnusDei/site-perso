@@ -1,9 +1,9 @@
 /******Base******/
-//@import "../../node_modules/bootstrap/scss/bootstrap";
-@import "../../node_modules/bootstrap/scss/functions";
-@import "../../node_modules/bootstrap/scss/variables";
-@import "../../node_modules/bootstrap/scss/mixins";
-@import "../../node_modules/bootstrap/scss/grid";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+// @import "../../node_modules/bootstrap/scss/functions";
+// @import "../../node_modules/bootstrap/scss/variables";
+// @import "../../node_modules/bootstrap/scss/mixins";
+// @import "../../node_modules/bootstrap/scss/grid";
 
 $primary: #38afbc;
 $important: #FF5D0F;
@@ -64,6 +64,11 @@ a
 	text-decoration: none;
 }
 
+a:hover
+{
+  text-decoration: none;
+}
+
 section
 {
   padding-top: 70px;
@@ -96,17 +101,6 @@ section
   }
   transition: all 200ms linear;
 }
-
-.burger-btn
-{
-  display: none;
-}
-
-// input, textarea
-// {
-//   font-family: 'Proza Libre', sans-serif;
-// }
-
 
 /*****Theme*****/
 .menu-item
@@ -147,6 +141,11 @@ a
 .current
 {
   color: $primary;
+}
+
+.burger-bar
+{
+  background-color: $primary;
 }
 
 @media (mix-width: $xLarge)
@@ -197,21 +196,6 @@ a
     .scale
     {
       justify-content: center;
-    }
-  }
-
-  header .menu
-  {
-    display: none;
-  }
-
-  .burger-btn
-  {
-    display: flex;
-
-    .burger-bar
-    {
-      background-color: $primary;
     }
   }
 }

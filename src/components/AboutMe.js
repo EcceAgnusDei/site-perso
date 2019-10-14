@@ -13,14 +13,14 @@ function AboutMe() {
 		<section id="apropos">
 			<div className="container">
 				<h2>à propos</h2>
-				<div className="body">
-					<div className="aside">
+				<div className="row">
+					<div className="col-12 col-md-3 d-flex flex-column align-items-center">
 						<img className="profil_picture" src={profil}/>
 						<a className="btn" target="_blank" href="http://mondoloni-dev.fr/CV_antoine_mondoloni.pdf">
 							Télécharger mon CV
 						</a>
 					</div>
-					<div className="paragraph">
+					<div className="col-12 col-md-9">
 						{aboutJSX}
 					</div>
 				</div>

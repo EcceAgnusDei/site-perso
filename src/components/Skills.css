@@ -1,11 +1,5 @@
-#competences .body
-{
-	display: flex;
-}
-
 .technical_skills
 {
-	margin-right: 50px;
 	min-height: 500px;
 	display: flex;
 	flex-direction: column;
@@ -20,18 +14,4 @@
 .globalSkills-item
 {
 	margin-top: 7px;
-}
-
-.technical_skills .body
-{
-	width: 340px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	flex: 1;
-}
-
-.technical_skills h3
-{
-	white-space: nowrap;
 }

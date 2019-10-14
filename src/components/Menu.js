@@ -38,7 +38,7 @@ function Menu(props) {
 		)
 	})
 	return (
-		<ul className={props.vertical ? "menu vertical" : "menu"}>
+		<ul className={props.vertical ? "vertical" : "d-none d-md-flex justify-content-between m-0"}>
 			{menuJSX}
 		</ul>
 	);

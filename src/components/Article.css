@@ -6,12 +6,17 @@
 	margin-bottom: 24px;
 }
 
+.article .title
+{
+	text-align: center;
+}
+
 .article .content
 {
 	background-color: rgba(0, 0, 0, 0.5);
 	width: 100%;
 	height: 100%;
-	display: none;
+	display: flex;
 	color: white;
 	flex-direction: column;
 	justify-content: center;
@@ -21,4 +26,12 @@
 .article:hover .content
 {
 	display: flex;
+}
+
+@media (hover: hover)
+{
+	.article .content
+	{
+		display: none;
+	}
 }

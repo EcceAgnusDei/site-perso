@@ -11,6 +11,7 @@ import ParallaxContainer from './components/ParallaxContainer';
 import Menu from './components/Menu';
 import background from './background.jpg';
 import projectList from './components/libs/projectList';
+import Logo from './components/Logo.js';
 import './css/App.css';
 
 class App extends Component {
@@ -46,7 +47,10 @@ class App extends Component {
 				>
 				{this.state.drawerContent}
 				</SideDrawer>
-		    	<Header burgerClick={this.drawe}/>
+		    	<Header 
+			    	burgerClick={this.drawe} 
+			    	logo={<Logo />}
+		    	/>
 		    	<ParallaxContainer img={background}>
 		    		<Home />
 		    	</ParallaxContainer>

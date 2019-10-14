@@ -7598,7 +7598,7 @@ body {
   margin: 0;
   color: #121212;
   font-family: 'Proza Libre', sans-serif;
-  font-size: 1.2em; }
+  font-size: 1.2rem; }
 
 p {
   text-align: justify; }
@@ -7628,6 +7628,25 @@ a:hover {
 section {
   padding-top: 70px; }
 
+textarea {
+  resize: none; }
+
+input, textarea {
+  box-shadow: none; }
+
+.footer-bottom {
+  font-size: 0.8rem; }
+
+@media (min-width: 576px) {
+  .footer-bottom {
+    font-size: 1.2rem; } }
+/*****Theme*****/
+.logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px; }
+  .logo a {
+    color: #121212; }
+
 .btn {
   color: #38afbc;
   padding: 3px 7px;
@@ -7645,18 +7664,13 @@ section {
   color: white;
   transition: all 200ms linear; }
 
-textarea {
-  resize: none; }
-
-input, textarea {
-  box-shadow: none; }
-
-/*****Theme*****/
 .title-underline {
   background-color: #38afbc; }
 
 .menu-item {
-  color: #121212; }
+  color: #121212;
+  font-size: 0.9em;
+  transition: all 100ms linear; }
 
 .menu-item:hover {
   color: #38afbc; }
@@ -7684,9 +7698,5 @@ a {
 
 #accueil .main_links {
   color: #38afbc; }
-
-@media (max-width: 768px) {
-  body {
-    font-size: 0.9em; } }
 
 /*# sourceMappingURL=App.css.map */

@@ -17,7 +17,7 @@ function Tools(props) {
 					<ScaledSkills title="Compétences techniques">
 						{skillsList}
 					</ScaledSkills>
-					<div className="global_skills col-12 col-md-6">
+					<div className="global_skills col-12 col-md-8 mt-5 mt-md-0">
 						<GlobalSkills title="Savoir faire">
 							{hardSkills}
 						</GlobalSkills>

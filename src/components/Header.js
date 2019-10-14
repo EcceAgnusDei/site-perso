@@ -6,9 +6,8 @@ import './Header.css';
 function Header(props) {
 	return (
 		<header>
-			<div className="container">
-			{props.logo &&
-				<img src={props.logo} className="logo"/>}
+			<div className="container d-flex justify-content-between">
+			{props.logo}
 				<BurgerButton click={() => props.burgerClick(
 					<Menu vertical>
 				        <li>accueil</li>

@@ -30,7 +30,7 @@ body
   margin: 0; 
   color: $black;
   font-family: 'Proza Libre', sans-serif;
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 
 p 
@@ -77,6 +77,42 @@ section
   padding-top: 70px;
 }
 
+
+
+textarea
+{
+  resize: none;
+}
+
+input, textarea
+{
+  box-shadow: none;
+}
+
+.footer-bottom 
+{
+  font-size: 0.8rem;
+}
+
+@include media-breakpoint-up(sm) {
+  .footer-bottom 
+  {
+    font-size: 1.2rem;
+  }
+}
+
+/*****Theme*****/
+
+.logo
+{
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  a
+  {
+    color: $black;
+  }
+}
+
 .btn
 {
   color: $primary;
@@ -105,18 +141,6 @@ section
   transition: all 200ms linear;
 }
 
-textarea
-{
-  resize: none;
-}
-
-input, textarea
-{
-  box-shadow: none;
-}
-
-/*****Theme*****/
-
 .title-underline
 {
   background-color: $primary;
@@ -125,6 +149,8 @@ input, textarea
 .menu-item
 {
   color: $black;
+  font-size: 0.9em;
+  transition: all 100ms linear;
 }
 
 .menu-item:hover
@@ -172,10 +198,3 @@ a
   color: $primary;
 }
 
-@media (max-width: $medium)
-{
-  body
-  {
-    font-size: 0.9em;
-  }
-}

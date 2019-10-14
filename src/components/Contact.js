@@ -10,8 +10,8 @@ function Contact() {
 			<div className="container">
 				<Title>contactez-moi</Title>
 				<div className="row">
-					<Info bootstrapClass="contact_info col-12 col-sm-4 col-md-6"/>
-					<Form bootstrapClass="col-12 col-sm-8 col-md-6"/>
+					<Info bootstrapClass="contact_info col-12 col-md-6"/>
+					<Form bootstrapClass="col-12 col-md-6"/>
 				</div>
 			</div>
 		</section>

@@ -9,7 +9,7 @@ function ScaledSkills(props) {
 		</div>
 	)
 	return (
-		<div className="technical_skills col-12 col-md-6">
+		<div className="technical_skills col-12 col-md-4">
 			<h3>{props.title}</h3>
 			<div className="flex-fill d-flex flex-column align-items-center align-items-md-start justify-content-between">{langagesJSX}</div>
 		</div>

@@ -28,7 +28,7 @@ function Menu(props) {
 		return (
 		<li key={item.props.children}>
 			<a 
-				className={activePage === id ? "menu-item current" : "menu-item"}
+				className={activePage === id ? "menu-item current ml-4" : "menu-item ml-4"}
 				href={`#${id}`}
 				onClick={() => setActivePage(id)}
 			>
@@ -37,11 +37,25 @@ function Menu(props) {
 		</li>
 		)
 	})
-	return (
-		<ul className={props.vertical ? "vertical" : "d-none d-md-flex justify-content-between m-0"}>
-			{menuJSX}
-		</ul>
-	);
+
+	if (props.vertical) {
+		return (
+			<nav className="d-flex justify-content-center h-100">
+				<ul className="vertical">
+					{menuJSX}
+				</ul>
+			</nav>
+		);
+	} else {
+		return (
+			<nav className="d-none d-md-flex align-items-center">
+				<ul className="d-flex justify-content-between m-0">
+					{menuJSX}
+				</ul>
+			</nav>
+		);
+	}
+	
 }
 
 export default Menu

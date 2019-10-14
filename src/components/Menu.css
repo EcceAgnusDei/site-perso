@@ -12,6 +12,5 @@
 .menu-item 
 {
   text-decoration: none;
-  text-transform: uppercase; 
-  transition: all 100ms linear;
+  text-transform: uppercase;
 }

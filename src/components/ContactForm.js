@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-import './ContactForm.css';
 import Alert from './Alert';
 
 class ContactForm extends Component {
@@ -17,8 +16,8 @@ class ContactForm extends Component {
 	}
 
 	handleSubmit = (event) => {
-		let tempState = 'error';
 		event.preventDefault();
+		let tempState = 'error';
 		const {name, email, phoneNumber, message} = event.target;
 
 		fetch('/API/contactMail.php', {
@@ -31,6 +30,7 @@ class ContactForm extends Component {
 				this.setState({
 					alert: 'success',
 					name: '',
+					submited: false,
 					email: '',
 					phoneNumber: '',
 					message: '',
@@ -58,9 +58,16 @@ class ContactForm extends Component {
 	
 	render() {
 		return (
-			<div class={this.props.bootstrapClass}>
-				<form onSubmit={this.handleSubmit} className="contact-form">
-					<div className="required_input">
+			<div className={this.props.bootstrapClass}>
+				<form 
+					onSubmit={this.handleSubmit} 
+					className={this.state.submited ? "was-validated" : ""}
+					id="contact-form"
+				>
+					<div className="input-group form-group">
+						<div className="input-group-prepend">
+							<span className="input-group-text">*</span>
+						</div>
 						<input 
 							type="text" 
 							name="name" 
@@ -68,11 +75,14 @@ class ContactForm extends Component {
 							aria-label="Nom"
 							onChange={this.handleChange}
 							value={this.state.name}
+							className="form-control"
 							required
 						/>
-						<div className="star">*</div>
 					</div>
-					<div className="required_input">
+					<div className="input-group form-group">
+						<div className="input-group-prepend">
+							<span className="input-group-text">*</span>
+						</div>
 						<input 
 							type="email" 
 							name="email" 
@@ -80,40 +90,62 @@ class ContactForm extends Component {
 							aria-label="email"
 							onChange={this.handleChange}
 							value={this.state.email}
+							className="form-control"
 							required
 						/>
-						<div className="star">*</div>
 					</div>
-					<input 
-						type="text" 
-						name="phoneNumber" 
-						placeholder="Téléphone" 
-						aria-label="téléphone"
-						onChange={this.handleChange}
-						value={this.state.phoneNumber}
-					/>
-					<div className="required_input">
+					<div className="form-group">
+						<input 
+							type="text" 
+							name="phoneNumber" 
+							placeholder="Téléphone" 
+							aria-label="téléphone"
+							onChange={this.handleChange}
+							value={this.state.phoneNumber}
+							className="form-control"
+						/>
+					</div>
+					<div className="input-group form-group">
+						<div className="input-group-prepend">
+							<span className="input-group-text">*</span>
+						</div>
 						<textarea
 							name="message" 
 							placeholder="Méssage" 
 							aria-label="message"
 							onChange={this.handleChange}
 							value={this.state.message}
+							className="form-control"
 							required
 						/>
-						<div className="star">*</div>
 					</div>
-					<label>
+					<div className="form-check">
 						<input 
 							type="checkbox" 
 							name="legal"
+							id="checkAgreement"
+							className="form-check-input"
 							onChange={this.handleChange}
 							checked={this.state.legal}
 							required
-						/>En soumettant ce formulaire, j'accepte que les informations 
-						saisies soient utilisées pour me recontacter.
-					</label>
-					<button className="btn">Envoyer</button>
+						/>
+						<label 
+							htmlFor="checkAgreement" 
+							className="form-check-label"
+							style={{fontSize: '0.7em'}}
+						>
+							En soumettant ce formulaire, j'accepte que les informations 
+							saisies soient utilisées pour me recontacter.
+						</label>
+					</div>
+					<button 
+						className="btn" 
+						onClick={() => {
+								this.setState({submited: true});
+							}	
+						}
+					>Envoyer
+					</button>
 				</form>
 				{this.state.alert === 'success' &&
 				<Alert click={this.closeAlert}>
@@ -123,7 +155,6 @@ class ContactForm extends Component {
 				<Alert click={this.closeAlert}>
 					Désolé, il y a eu un problème...
 				</Alert>}
-
 			</div>
 		);
 	}

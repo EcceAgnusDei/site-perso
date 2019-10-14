@@ -5,13 +5,14 @@ import ScaledSkills from './ScaledSkills';
 import skillsList from './libs/skills';
 import hardSkills from './libs/hardSkills';
 import softSkills from './libs/softSkills';
+import Title from './Title2';
 import './Skills.css'
 
 function Tools(props) {
 	return (
 		<section id="competences">
 			<div className="container">
-				<h2>compétences</h2>
+				<Title>compétences</Title>
 				<div className="row">
 					<ScaledSkills title="Compétences techniques">
 						{skillsList}

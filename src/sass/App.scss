@@ -1,26 +1,24 @@
 /******Base******/
+$theme-colors: (
+  "primary": #38afbc,
+  "danger": #FF5D0F
+);
+
 @import "../../node_modules/bootstrap/scss/bootstrap";
 // @import "../../node_modules/bootstrap/scss/functions";
 // @import "../../node_modules/bootstrap/scss/variables";
 // @import "../../node_modules/bootstrap/scss/mixins";
 // @import "../../node_modules/bootstrap/scss/grid";
 
-$primary: #38afbc;
-$important: #FF5D0F;
-
 $black: #121212;
 $grey: #999999;
 $light: #EEEEEE;
-
+$primary: map_get($theme-colors, 'primary');
+$danger: map_get($theme-colors, 'danger');
 $small: 560px;
-$medium: 760px;
+$medium: 768px;
 $large: 960px;
 $xLarge: 1700px;
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box; }
 
 html 
 {
@@ -35,6 +33,11 @@ body
   font-size: 1.2em;
 }
 
+p 
+{
+  text-align: justify
+}
+
 li 
 {
   list-style-type: none; 
@@ -46,11 +49,10 @@ ul
   padding: 0; 
 }
 
-// .container 
-// {
-//   width: $large;
-//   margin: auto;
-// }
+h2
+{
+  font-size: 2.2rem;
+}
 
 h1, h2, h3, h4, .title
 {
@@ -67,6 +69,7 @@ a
 a:hover
 {
   text-decoration: none;
+  color: darken($primary, 10);
 }
 
 section
@@ -102,7 +105,23 @@ section
   transition: all 200ms linear;
 }
 
+textarea
+{
+  resize: none;
+}
+
+input, textarea
+{
+  box-shadow: none;
+}
+
 /*****Theme*****/
+
+.title-underline
+{
+  background-color: $primary;
+}
+
 .menu-item
 {
   color: $black;
@@ -148,20 +167,9 @@ a
   background-color: $primary;
 }
 
-@media (mix-width: $xLarge)
+#accueil .main_links
 {
-  // .container
-  // {
-  //   width: 65%;
-  // }
-}
-
-@media (max-width: $large)
-{
-  .container
-  {
-    width: 98%;
-  }
+  color: $primary;
 }
 
 @media (max-width: $medium)
@@ -169,62 +177,5 @@ a
   body
   {
     font-size: 0.9em;
-  }
-
-  #competences
-  {
-    .body
-    {
-      flex-direction: column;
-    }
-
-    .globalSkills-container:first-child
-    {
-      margin-top: 33px;
-    }
-  }
-
-  .technical_skills
-  {
-    margin: 0;
-
-    .body
-    {
-      width: 100%;
-    }
-
-    .scale
-    {
-      justify-content: center;
-    }
-  }
-}
-
-@media (max-width: $small)
-{
-  #contact
-  {
-    .body
-    {
-      flex-direction: column;
-    }
-
-    .contact-form
-    {
-      margin: auto;
-    }
-  }
-
-  #apropos
-  {
-    .body
-    {
-      flex-direction: column;
-    }
-
-    .aside
-    {
-      margin: 0;
-    }
   }
 }

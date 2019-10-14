@@ -7,6 +7,6 @@ header
   display: flex !important;
   align-items: center;
   position: fixed; 
-  z-index: 1000;
+  z-index: 500;
 }
  

@@ -3,6 +3,8 @@ import about from './libs/aboutMe';
 import profil from '../profil.jpg';
 import './AboutMe.css';
 
+import Title from './Title2.js'
+
 function AboutMe() {
 	let count = -1;
 	const aboutJSX = about.map(item => {
@@ -12,7 +14,7 @@ function AboutMe() {
 	return (
 		<section id="apropos">
 			<div className="container">
-				<h2>à propos</h2>
+				<Title>à propos</Title>
 				<div className="row">
 					<div className="col-12 col-md-3 d-flex flex-column align-items-center">
 						<img className="profil_picture" src={profil}/>

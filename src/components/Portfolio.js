@@ -2,10 +2,12 @@ import React from 'react';
 import Showroom from './Showroom';
 import Article from './Article';
 
+import Title from './Title2';
+
 
 function Portfolio(props) {
 	const articlesJSX = props.children.map(item =>
-		<div className="offset-2 offset-sm-0 col-8 col-sm-6 col-md-4 col-lg-3">
+		<div className="offset-2 offset-sm-0 col-8 col-sm-6 col-md-4 col-lg-3" key={item.title}>
 			<Article 
 				title={item.title}
 				subtitle={item.subtitle}
@@ -22,7 +24,7 @@ function Portfolio(props) {
 	return (
 		<section id="portfolio">
 			<div className="container">
-				<h2>portfolio</h2>
+				<Title>portfolio</Title>
 				<Showroom>
 					{articlesJSX}
 				</Showroom>

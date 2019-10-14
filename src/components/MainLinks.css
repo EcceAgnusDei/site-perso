@@ -12,4 +12,5 @@
 {
 	transform: scale(1.1);
 	transition: all 100ms linear;
+	color: inherit;
 }

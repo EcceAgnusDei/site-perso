@@ -7596,6 +7596,7 @@ html {
 
 body {
   margin: 0;
+  background-color: #f8f9fa;
   color: #121212;
   font-family: 'Proza Libre', sans-serif;
   font-size: 1.2rem; }
@@ -7626,7 +7627,10 @@ a:hover {
   color: #2c8a95; }
 
 section {
-  padding-top: 70px; }
+  margin: 70px 0; }
+
+section:first-child {
+  margin: 0; }
 
 textarea {
   resize: none; }
@@ -7641,6 +7645,9 @@ input, textarea {
   .footer-bottom {
     font-size: 1.2rem; } }
 /*****Theme*****/
+header {
+  background-color: #f8f9fa; }
+
 .logo {
   font-family: 'Cormorant Garamond', serif;
   font-size: 32px; }
@@ -7688,7 +7695,7 @@ a {
   color: #121212; }
 
 .star {
-  background-color: #EEEEEE; }
+  background-color: #f8f9fa; }
 
 .current {
   color: #38afbc; }

@@ -10,11 +10,11 @@ function FullArticle(props) {
 	// 	window.open(link);
 	// }
 
-	const style = {
-		backgroundImage: `url(${img})`,
-		backgroundSize: 'cover',
-		backgroundPosition: 'center top'
-	}
+	// const style = {
+	// 	backgroundImage: `url(${img})`,
+	// 	backgroundSize: 'cover',
+	// 	backgroundPosition: 'center top'
+	// }
 
 	return (
 		<div className="full_article container">
@@ -24,9 +24,9 @@ function FullArticle(props) {
 			<PictureContainer width='100%' height='70%' url={img}/>}
 			<div class="btn-wrapper">
 				{link.length > 0 && 
-				<a href={link} className="btn" target="_blank">Le site</a>}
+				<a href={link} className="btn" target="_blank" rel="noopener noreferrer">Le site</a>}
 				{github &&
-				<a href={github} className="btn" target="_blank">Le code</a>}
+				<a href={github} className="btn" target="_blank" rel="noopener noreferrer">Le code</a>}
 			</div>		
 		</div>
 	);

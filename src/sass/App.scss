@@ -12,7 +12,7 @@ $theme-colors: (
 
 $black: #121212;
 $grey: #999999;
-$light: #EEEEEE;
+$light: map_get($theme-colors, 'light');
 $primary: map_get($theme-colors, 'primary');
 $danger: map_get($theme-colors, 'danger');
 $small: 560px;
@@ -28,6 +28,7 @@ html
 body 
 {
   margin: 0; 
+  background-color: $light;
   color: $black;
   font-family: 'Proza Libre', sans-serif;
   font-size: 1.2rem;
@@ -74,10 +75,13 @@ a:hover
 
 section
 {
-  padding-top: 70px;
+  margin: 70px 0;
 }
 
-
+section:first-child
+{
+  margin: 0;
+}
 
 textarea
 {
@@ -102,6 +106,11 @@ input, textarea
 }
 
 /*****Theme*****/
+
+header
+{
+  background-color: $light;
+}
 
 .logo
 {

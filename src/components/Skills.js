@@ -1,5 +1,4 @@
 import React from 'react';
-import Scale from './Scale';
 import GlobalSkills from './GlobalSkills';
 import ScaledSkills from './ScaledSkills';
 import skillsList from './libs/skills';

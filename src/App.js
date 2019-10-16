@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, lazy, Suspense } from 'react';
 import { Parallax } from 'react-parallax';
 
 import Header from './components/Header';
@@ -10,6 +10,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Interlude from './components/Interlude';
 import SideDrawer from './components/SideDrawer';
+import Overlay from './components/Overlay';
 import background from './background-min.jpg';
 import chillingCat from './chillingCat-min.jpg';
 import codingMan from './codingMan-min.jpg';
@@ -17,6 +18,10 @@ import helloWorld from './helloWorld-min.jpg';
 import projectList from './components/libs/projectList';
 import Logo from './components/Logo.js';
 import './css/App.css';
+
+const CodingMan = lazy(() => import('./components/CodingMan.js'));
+const ChillingCat = lazy(() => import('./components/ChillingCat.js'));
+const HelloWorld = lazy(() => import('./components/HelloWorld.js'));
 
 class App extends Component {
 	constructor(props) {
@@ -63,13 +68,22 @@ class App extends Component {
 		    		<Home/>
 		    	</Parallax>
 		    	<AboutMe />
-		    	{!this.isMobileDevice && <Interlude img={helloWorld}/>}
+		    	{!this.isMobileDevice &&
+		    		<Suspense fallback={<Overlay height="300px"/>}> 
+		    			<HelloWorld />
+		    		</Suspense>}
 		    	<Skills />
-		    	{!this.isMobileDevice && <Interlude img={codingMan}/>}
+		    	{!this.isMobileDevice && 
+		    		<Suspense fallback={<Overlay height="300px"/>}>
+		    			<CodingMan />
+		    		</Suspense>}
 		    	<Portfolio articleClickHandler={this.drawe}>
 		    		{projectList}
 		    	</Portfolio>
-		    	{!this.isMobileDevice && <Interlude img={chillingCat}/>}
+		    	{!this.isMobileDevice &&
+		    		<Suspense fallback={<Overlay height="300px"/>}>
+		    			<ChillingCat />
+		    		</Suspense>}
 		    	<Contact />
 		    	<Footer />
     		</div>

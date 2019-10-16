@@ -22,7 +22,7 @@ function FullArticle(props) {
 			<div className="paragraph">{text}</div>
 			{img &&
 			<PictureContainer width='100%' height='70%' url={img}/>}
-			<div class="btn-wrapper">
+			<div className="btn-wrapper">
 				{link.length > 0 && 
 				<a href={link} className="btn" target="_blank" rel="noopener noreferrer">Le site</a>}
 				{github &&

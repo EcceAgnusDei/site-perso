@@ -22,8 +22,7 @@ String.prototype.sansAccent = function(){
 }
 
 function Menu(props) {
-	const [activePage, setActivePage] = useState('accueil');
-	const [yPos, setYPos] = useState(0);
+	const [activePage, setActivePage] = useState('Accueil');
 	const yPosRef = useRef(0);
 	const pagesId = [];
 	let pagesY;
@@ -36,7 +35,7 @@ function Menu(props) {
 			if (Math.abs(yPosRef.current - window.scrollY) > 90)
 			{
 				yPosRef.current = window.scrollY;
-				setYPos(window.scrollY);
+				yPosRef.current += 100;
 
 				if (yPosRef.current < pagesY[0])
 				{

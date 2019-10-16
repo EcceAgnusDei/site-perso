@@ -7627,7 +7627,8 @@ a:hover {
   color: #2c8a95; }
 
 section {
-  margin: 70px 0; }
+  margin-bottom: 70px;
+  padding-top: 70px; }
 
 section:first-child {
   margin: 0; }

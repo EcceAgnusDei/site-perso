@@ -1,4 +1,6 @@
 import React from 'react';
+import {FaGithub, FaLinkedinIn, FaEnvelope} from "react-icons/fa"
+
 import './MainLinks.css'
 
 function MainLinks() {
@@ -10,7 +12,7 @@ function MainLinks() {
 				href="http://www.linkedin.com/in/antoine-mondoloni-2b176a140"
 				rel="noopener noreferrer"
 			>
-				<i className="fab fa-linkedin-in"></i>
+				<FaLinkedinIn />
 			</a>
 			<a 
 				target="_blank" 
@@ -18,13 +20,14 @@ function MainLinks() {
 				href="https://github.com/EcceAgnusDei"
 				rel="noopener noreferrer"
 			>
-				<i className="fab fa-github"></i>
+				<FaGithub />
 			</a>
 			<a 
 				target="_blank" 
 				className="main_links-item" 
 				href="http://mondoloni-dev.fr/CV/"
 				rel="noopener noreferrer"
+				className="CV"
 			>
 				cv
 			</a>
@@ -34,7 +37,7 @@ function MainLinks() {
 				href="mailto:mondo.antoine@yahoo.fr"
 				rel="noopener noreferrer"
 			>
-				<i className="far fa-envelope"></i>
+				<FaEnvelope />
 			</a>
 		</div>
 	);

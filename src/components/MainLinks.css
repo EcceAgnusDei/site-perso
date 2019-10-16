@@ -8,6 +8,11 @@
 	font-size: 1.7em;
 }
 
+.CV
+{
+	padding-top: 3px;
+}
+
 .main_links a:hover
 {
 	transform: scale(1.1);

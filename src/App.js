@@ -25,6 +25,7 @@ class App extends Component {
 			sideDrawerOpen: false,
 			drawerContent: null
 		};
+		this.isMobileDevice = (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
 	}
 
 	drawerClickHandler = () => {
@@ -62,13 +63,13 @@ class App extends Component {
 		    		<Home/>
 		    	</Parallax>
 		    	<AboutMe />
-		    	<Interlude img={helloWorld}/>
+		    	{!this.isMobileDevice && <Interlude img={helloWorld}/>}
 		    	<Skills />
-		    	<Interlude img={codingMan}/>
+		    	{!this.isMobileDevice && <Interlude img={codingMan}/>}
 		    	<Portfolio articleClickHandler={this.drawe}>
 		    		{projectList}
 		    	</Portfolio>
-		    	<Interlude img={chillingCat}/>
+		    	{!this.isMobileDevice && <Interlude img={chillingCat}/>}
 		    	<Contact />
 		    	<Footer />
     		</div>

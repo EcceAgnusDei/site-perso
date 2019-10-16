@@ -1,6 +1,8 @@
 import React from 'react';
 import { Parallax } from 'react-parallax';
 
+import Overlay from './Overlay.js';
+
 function Interlude(props) {
 	const height = 300;
 	return (
@@ -11,15 +13,9 @@ function Interlude(props) {
     			height: height
 			}}
 		>
-			<div
-				style={{
-					backgroundColor: 'rgba(255, 255, 255, 0.3)',
-					height: height,
-					width: '100%'
-				}}
-			>
+			<Overlay height={height}>
 				{props.children}
-			</div>
+			</Overlay>
 		</Parallax>
 	);
 }

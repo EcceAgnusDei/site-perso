@@ -11,17 +11,17 @@ import Footer from './components/Footer';
 import Interlude from './components/Interlude';
 import SideDrawer from './components/SideDrawer';
 import Overlay from './components/Overlay';
-import background from './background-min.jpg';
-import chillingCat from './chillingCat-min.jpg';
-import codingMan from './codingMan-min.jpg';
-import helloWorld from './helloWorld-min.jpg';
+import ProgressiveParallax from './components/ProgressiveParallax';
+import background from './assets/img/background-min.jpg';
+import cat from './assets/img/chillingCat-min.jpg';
+import catMicro from './assets/img/chillingCat-micro.jpg';
+import codingMan from './assets/img/codingMan-min.jpg';
+import codingManMicro from './assets/img/codingMan-micro.jpg';
+import helloWorld from './assets/img/helloWorld-min.jpg';
+import helloWorldMicro from './assets/img/helloWorld-micro.jpg';
 import projectList from './components/libs/projectList';
 import Logo from './components/Logo.js';
 import './css/App.css';
-
-const CodingMan = lazy(() => import('./components/CodingMan.js'));
-const ChillingCat = lazy(() => import('./components/ChillingCat.js'));
-const HelloWorld = lazy(() => import('./components/HelloWorld.js'));
 
 class App extends Component {
 	constructor(props) {
@@ -68,22 +68,32 @@ class App extends Component {
 		    		<Home/>
 		    	</Parallax>
 		    	<AboutMe />
-		    	{!this.isMobileDevice &&
-		    		<Suspense fallback={<Overlay height="300px"/>}> 
-		    			<HelloWorld />
-		    		</Suspense>}
+	    		<ProgressiveParallax
+		    		src={helloWorld}
+		    		placeHolder={helloWorldMicro}
+		    		height={300}
+		    		overlay
+	    		/>
 		    	<Skills />
-		    	{!this.isMobileDevice && 
-		    		<Suspense fallback={<Overlay height="300px"/>}>
-		    			<CodingMan />
-		    		</Suspense>}
+		    	<Overlay>
+		    		<ProgressiveParallax
+			    		src={codingMan}
+			    		placeHolder={codingManMicro}
+			    		height={300}
+			    		overlay
+		    		/>
+		    	</Overlay>
 		    	<Portfolio articleClickHandler={this.drawe}>
 		    		{projectList}
 		    	</Portfolio>
-		    	{!this.isMobileDevice &&
-		    		<Suspense fallback={<Overlay height="300px"/>}>
-		    			<ChillingCat />
-		    		</Suspense>}
+		    	<Overlay>
+		    		<ProgressiveParallax
+			    		src={cat}
+			    		placeHolder={catMicro}
+			    		height={300}
+			    		overlay
+		    		/>
+		    	</Overlay>
 		    	<Contact />
 		    	<Footer />
     		</div>

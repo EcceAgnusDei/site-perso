@@ -1,6 +1,6 @@
 import React from 'react';
 import about from './libs/aboutMe';
-import profil from '../profil.jpg';
+import profil from '../assets/img/profil.jpg';
 import './AboutMe.css';
 
 import Title from './Title2.js'

@@ -25,7 +25,7 @@ function MainLinks() {
 			<a 
 				target="_blank" 
 				className="main_links-item" 
-				href="http://mondoloni-dev.fr/CV/"
+				href="http://mondoloni-dev.fr/CV_antoine_mondoloni.pdf"
 				rel="noopener noreferrer"
 				className="CV"
 			>

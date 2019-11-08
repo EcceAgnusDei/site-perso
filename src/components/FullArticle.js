@@ -5,17 +5,6 @@ import PictureContainer from './PictureContainer';
 function FullArticle(props) {
 	const {title, subtitle, text, link, img, github} = props;
 
-	// const linkHandler = (event) => {
-	// 	event.preventDefault();
-	// 	window.open(link);
-	// }
-
-	// const style = {
-	// 	backgroundImage: `url(${img})`,
-	// 	backgroundSize: 'cover',
-	// 	backgroundPosition: 'center top'
-	// }
-
 	return (
 		<div className="full_article container">
 			<div className="title">{title} - {subtitle}</div>

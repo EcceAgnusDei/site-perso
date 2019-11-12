@@ -1,6 +1,6 @@
 import React from 'react';
-import Title from './Title';
-import MainLinks from './MainLinks';
+import Title from 'elements/Title';
+import MainLinks from 'elements/MainLinks';
 import './Home.css';
 
 function Home() {

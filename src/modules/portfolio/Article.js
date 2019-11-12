@@ -1,8 +1,10 @@
 import React from 'react';
-import './Article.css';
-import PictureContainer from './PictureContainer';
+
+import PictureContainer from 'elements/PictureContainer';
+import Separator from 'elements/Separator';
+
 import FullArticle from './FullArticle';
-import Separator from './Separator';
+import './Article.css';
 
 function Article(props) {
 	const {title, subtitle, img, text, link, imgMin, github} = props;

@@ -1,10 +1,13 @@
 import React from 'react';
+
+import skillsList from 'libs/skills';
+import hardSkills from 'libs/hardSkills';
+import softSkills from 'libs/softSkills';
+import Title from 'elements/Title2';
+
 import GlobalSkills from './GlobalSkills';
 import ScaledSkills from './ScaledSkills';
-import skillsList from './libs/skills';
-import hardSkills from './libs/hardSkills';
-import softSkills from './libs/softSkills';
-import Title from './Title2';
+
 import './Skills.css'
 
 function Tools(props) {

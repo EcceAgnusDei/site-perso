@@ -1,8 +1,9 @@
 import React from 'react';
+
+import Title from 'elements/Title2';
+
 import Info from './ContactInformation';
 import Form from './ContactForm';
-
-import Title from './Title2';
 
 function Contact() {
 	return (

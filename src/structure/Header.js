@@ -1,6 +1,6 @@
 import React from 'react';
 import Menu from './Menu';
-import BurgerButton from './BurgerButton';
+import BurgerButton from 'elements/BurgerButton';
 import './Header.css';
 
 function Header(props) {

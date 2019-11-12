@@ -1,26 +1,25 @@
 import React, { Component, lazy, Suspense } from 'react';
 import { Parallax } from 'react-parallax';
 
-import Header from './components/Header';
-import Home from './components/Home';
-import AboutMe from './components/AboutMe';
-import Skills from './components/Skills';
-import Portfolio from './components/Portfolio';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import Interlude from './components/Interlude';
-import SideDrawer from './components/SideDrawer';
-import Overlay from './components/Overlay';
-import ProgressiveParallax from './components/ProgressiveParallax';
-import background from './assets/img/background-min.jpg';
-import cat from './assets/img/chillingCat-min.jpg';
-import catMicro from './assets/img/chillingCat-micro.jpg';
-import codingMan from './assets/img/codingMan-min.jpg';
-import codingManMicro from './assets/img/codingMan-micro.jpg';
-import helloWorld from './assets/img/helloWorld-min.jpg';
-import helloWorldMicro from './assets/img/helloWorld-micro.jpg';
-import projectList from './components/libs/projectList';
-import Logo from './components/Logo.js';
+import Header from 'structure/Header';
+import Home from 'modules/home/Home';
+import AboutMe from 'modules/about/AboutMe';
+import Skills from 'modules/skills/Skills';
+import Portfolio from 'modules/portfolio/Portfolio';
+import Contact from 'modules/contact/Contact';
+import Footer from 'structure/Footer';
+import SideDrawer from 'elements/SideDrawer';
+import Overlay from 'elements/Overlay';
+import ProgressiveParallax from 'elements/ProgressiveParallax';
+import background from 'assets/img/background-min.jpg';
+import cat from 'assets/img/chillingCat-min.jpg';
+import catMicro from 'assets/img/chillingCat-micro.jpg';
+import codingMan from 'assets/img/codingMan-min.jpg';
+import codingManMicro from 'assets/img/codingMan-micro.jpg';
+import helloWorld from 'assets/img/helloWorld-min.jpg';
+import helloWorldMicro from 'assets/img/helloWorld-micro.jpg';
+import projectList from 'libs/projectList';
+import Logo from 'structure/Logo.js';
 import './css/App.css';
 
 class App extends Component {
@@ -75,25 +74,21 @@ class App extends Component {
 		    		overlay
 	    		/>
 		    	<Skills />
-		    	<Overlay>
-		    		<ProgressiveParallax
-			    		src={codingMan}
-			    		placeHolder={codingManMicro}
-			    		height={300}
-			    		overlay
-		    		/>
-		    	</Overlay>
+	    		<ProgressiveParallax
+		    		src={codingMan}
+		    		placeHolder={codingManMicro}
+		    		height={300}
+		    		overlay
+	    		/>
 		    	<Portfolio articleClickHandler={this.drawe}>
 		    		{projectList}
 		    	</Portfolio>
-		    	<Overlay>
-		    		<ProgressiveParallax
-			    		src={cat}
-			    		placeHolder={catMicro}
-			    		height={300}
-			    		overlay
-		    		/>
-		    	</Overlay>
+	    		<ProgressiveParallax
+		    		src={cat}
+		    		placeHolder={catMicro}
+		    		height={300}
+		    		overlay
+	    		/>
 		    	<Contact />
 		    	<Footer />
     		</div>

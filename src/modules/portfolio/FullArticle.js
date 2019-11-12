@@ -1,6 +1,8 @@
 import React from 'react';
+
+import PictureContainer from 'elements/PictureContainer';
+
 import './FullArticle.css';
-import PictureContainer from './PictureContainer';
 
 function FullArticle(props) {
 	const {title, subtitle, text, link, img, github} = props;

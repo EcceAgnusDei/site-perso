@@ -1,5 +1,5 @@
 import React from 'react';
-import MainLinks from './MainLinks'
+import MainLinks from 'elements/MainLinks'
 import './Footer.css';
 
 function Footer() {

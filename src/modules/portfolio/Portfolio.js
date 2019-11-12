@@ -1,9 +1,9 @@
 import React from 'react';
+
+import Title from 'elements/Title2';
+
 import Showroom from './Showroom';
 import Article from './Article';
-
-import Title from './Title2';
-
 
 function Portfolio(props) {
 	const articlesJSX = props.children.map(item =>

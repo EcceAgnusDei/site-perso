@@ -1,9 +1,11 @@
 import React from 'react';
-import about from './libs/aboutMe';
-import profil from '../assets/img/profil.jpg';
+
+import about from 'libs/aboutMe';
+import profil from 'assets/img/profil.jpg';
+import Title from 'elements/Title2.js'
+
 import './AboutMe.css';
 
-import Title from './Title2.js'
 
 function AboutMe() {
 	let count = -1;

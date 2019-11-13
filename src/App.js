@@ -22,7 +22,7 @@ import helloWorld from 'assets/img/helloWorld-min.jpg';
 import helloWorldMicro from 'assets/img/helloWorld-micro.jpg';
 import projectList from 'libs/projectList';
 
-import './css/App.css';
+import 'assets/css/style.css';
 import theme from './theme';
 
 class App extends Component {
@@ -62,7 +62,7 @@ class App extends Component {
 				drawerWidth='70%';
 		}
 		return (
-			<div className="App">
+			<div style={{color: theme.black, backgroundColor: theme.light}}>
 				<ThemeProvider theme={theme}>
 					<SideDrawer 
 						open={this.state.sideDrawerOpen ? true : false} 

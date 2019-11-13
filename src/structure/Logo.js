@@ -1,11 +1,21 @@
-import React from 'react'
+import React from 'react';
+import styled from 'styled-components';
+
+const StyledDiv = styled.div`
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 32px;
+	a
+	{
+		color: ${props => props.theme.black};
+	}
+`;
 
 function Logo() {
 	return (
-		<div className="logo">
+		<StyledDiv>
 			<a href="/">M.Dev</a>
-		</div>
+		</StyledDiv>
 	);
 }
 
-export default Logo
+export default Logo;

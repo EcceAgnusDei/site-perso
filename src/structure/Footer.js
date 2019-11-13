@@ -18,6 +18,15 @@ const FooterTop = styled.div`
 const FooterBottom = styled.div`
 	background-color: ${props => props.theme.darkGrey};
 	height: 80px;
+
+	@media (max-width: ${props => props.theme.sm})
+	{
+		font-size: 0.9rem;
+	}
+
+	& a {
+		color: inherit;
+	}
 `;
 
 function Footer() {

@@ -12,6 +12,11 @@ const StyledImg = styled.img`
 	box-shadow: 0px 5px 9px 0px rgba(0, 0, 0, 0.5);
 `;
 
+const StyledDiv = styled.div`
+	& a {
+		color: ${props => props.theme.primary}
+	}
+`;
 
 function AboutMe() {
 	const aboutJSX = about.map((item, index) => {
@@ -19,7 +24,7 @@ function AboutMe() {
 	})
 	return (
 		<section id="apropos">
-			<div className="container">
+			<StyledDiv className="container">
 				<Title>à propos</Title>
 				<div className="row">
 					<div className="col-12 col-md-3 d-flex flex-column align-items-center">
@@ -38,7 +43,7 @@ function AboutMe() {
 						{aboutJSX}
 					</div>
 				</div>
-			</div>
+			</StyledDiv>
 		</section>
 	);
 }

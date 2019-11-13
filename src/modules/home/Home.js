@@ -12,6 +12,7 @@ const StyledSection = styled.section`
 	flex-direction: column;
 	justify-content: center;
 	padding-top: 0;
+	background-color: rgba(255, 255, 255, 0.7);
 `;
 
 const TitleContainer = styled.div`

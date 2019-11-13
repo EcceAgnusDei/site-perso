@@ -9,12 +9,15 @@ const StyledDiv = styled.div`
 	width: 230px; 
 	text-transform: uppercase;
 	font-size: 1.7em;
-	color: ${props => props.color};
+	
+	& a {
+		color: ${props => props.color} !important;
+	}
 
 	& a:hover {
 		transform: scale(1.1);
 		transition: all 100ms linear;
-		color: ${props => props.color};
+		color: ${props => props.color} !important;
 	}
 `;
 

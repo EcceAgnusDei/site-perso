@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import Button from 'elements/Button';
+
 import Alert from './Alert';
 
 class ContactForm extends Component {
@@ -138,14 +140,13 @@ class ContactForm extends Component {
 							saisies soient utilisées pour me recontacter.
 						</label>
 					</div>
-					<button 
-						className="btn" 
+					<Button 
 						onClick={() => {
 								this.setState({submited: true});
 							}	
 						}
 					>Envoyer
-					</button>
+					</Button>
 				</form>
 				{this.state.alert === 'success' &&
 				<Alert click={this.closeAlert}>

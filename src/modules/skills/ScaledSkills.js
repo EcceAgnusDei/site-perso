@@ -1,18 +1,35 @@
 import React from 'react';
+import styled from 'styled-components';
+
 import Scale from './Scale';
 
+const StyledDiv = styled.div`
+	min-height: 500px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+`;
+
 function ScaledSkills(props) {
-	const langagesJSX = props.children.map(item => 
-		<div key={item.nom}>
+	const langagesJSX = props.children.map((item, index) => 
+		<div key={index}>
 			<p className="m-0 text-center text-md-left">{item.nom}</p>
-			<Scale level={item.niveau} color='#38afbc'/>
+			<Scale level={item.niveau} />
 		</div>
 	)
 	return (
-		<div className="technical_skills col-12 col-md-4">
+		<StyledDiv className="col-12 col-md-4">
 			<h3>{props.title}</h3>
-			<div className="flex-fill d-flex flex-column align-items-center align-items-md-start justify-content-between">{langagesJSX}</div>
-		</div>
+			<div className={`flex-fill 
+				d-flex 
+				flex-column 
+				align-items-center 
+				align-items-md-start 
+				justify-content-between`}
+			>
+				{langagesJSX}
+			</div>
+		</StyledDiv>
 	);
 }
 

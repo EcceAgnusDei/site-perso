@@ -1,45 +1,56 @@
 import React from 'react';
-import {FaGithub, FaLinkedinIn, FaEnvelope} from "react-icons/fa"
+import {FaGithub, FaLinkedinIn, FaEnvelope} from 'react-icons/fa';
+import styled from 'styled-components';
 
-import './MainLinks.css'
+const StyledDiv = styled.div`
+	margin: auto;
+	display: flex;
+	justify-content: space-around;
+	width: 230px; 
+	text-transform: uppercase;
+	font-size: 1.7em;
+	color: ${props => props.color};
 
-function MainLinks() {
+	& a:hover {
+		transform: scale(1.1);
+		transition: all 100ms linear;
+		color: ${props => props.color};
+	}
+`;
+
+function MainLinks(props) {
 	return (
-		<div className="main_links">
+		<StyledDiv color={props.color}>
 			<a 
-				target="_blank" 
-				className="main_links-item" 
+				target="_blank"
 				href="http://www.linkedin.com/in/antoine-mondoloni-2b176a140"
 				rel="noopener noreferrer"
 			>
 				<FaLinkedinIn />
 			</a>
 			<a 
-				target="_blank" 
-				className="main_links-item" 
+				target="_blank"
 				href="https://github.com/EcceAgnusDei"
 				rel="noopener noreferrer"
 			>
 				<FaGithub />
 			</a>
 			<a 
-				target="_blank" 
-				className="main_links-item" 
+				target="_blank"
 				href="http://mondoloni-dev.fr/CV_antoine_mondoloni.pdf"
 				rel="noopener noreferrer"
-				className="CV"
+				style={{paddingTop: 3}}
 			>
 				cv
 			</a>
 			<a 
-				target="_blank" 
-				className="main_links-item" 
+				target="_blank"
 				href="mailto:mondo.antoine@yahoo.fr"
 				rel="noopener noreferrer"
 			>
 				<FaEnvelope />
 			</a>
-		</div>
+		</StyledDiv>
 	);
 }
 

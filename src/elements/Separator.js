@@ -1,15 +1,11 @@
-import React from 'react'
+import React from 'react';
+import styled from 'styled-components';
 
-function Separator() {
-	const style = {
-		height: 3,
-		width: '50px',
-		margin: '7px auto'
-	};
-
-	return (
-		<div className="separator" style={style}/>
-	);
-}
+const Separator = styled.div`
+	height: 3px;
+	width: 50px;
+	margin: 7px auto;
+	background-color: ${props => props.theme.primary};
+`;
 
 export default Separator

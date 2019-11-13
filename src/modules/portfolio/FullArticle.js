@@ -1,25 +1,55 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import PictureContainer from 'elements/PictureContainer';
+import Button from 'elements/Button';
+import FlexContainer from 'elements/FlexContainer';
 
-import './FullArticle.css';
+const StyledDiv = styled(FlexContainer)`
+	margin: auto;
+	padding: 30px;
+	flex-direction: column;
 
-function FullArticle(props) {
-	const {title, subtitle, text, link, img, github} = props;
+	& li {
+		list-style-type: circle;
+	}
+`;
 
+const BtnWrapper = styled.div`
+	display: flex;
+	justify-content: center;
+
+	& a {
+		margin: 7px;
+	}
+`;
+
+function FullArticle({title, subtitle, text, link, img, github}) {
 	return (
-		<div className="full_article container">
+		<StyledDiv>
 			<div className="title">{title} - {subtitle}</div>
 			<div className="paragraph">{text}</div>
 			{img &&
-			<PictureContainer width='100%' height='70%' url={img}/>}
-			<div className="btn-wrapper">
+			<PictureContainer width='100%' mH='300px' shadow url={img}/>}
+			<BtnWrapper>
 				{link.length > 0 && 
-				<a href={link} className="btn" target="_blank" rel="noopener noreferrer">Le site</a>}
+				<a 
+					href={link}
+					target="_blank" 
+					rel="noopener noreferrer"
+				>
+					<Button>Le site</Button>
+				</a>}
 				{github &&
-				<a href={github} className="btn" target="_blank" rel="noopener noreferrer">Le code</a>}
-			</div>		
-		</div>
+				<a 
+					href={github}
+					target="_blank" 
+					rel="noopener noreferrer"
+				>
+					<Button>Le code</Button>
+				</a>}
+			</BtnWrapper>		
+		</StyledDiv>
 	);
 }
 

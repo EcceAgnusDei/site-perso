@@ -1,39 +1,37 @@
-import React from 'react'
+import React from 'react';
+import styled from 'styled-components';
+
+const Circle = styled.div`
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	margin-left: 1px;
+	border: 1px solid ${props => props.theme.primary};
+	background-color: ${props => props.full ? props.theme.primary : 'transparent'};
+`;
 
 function Scale(props) {
 	const echelle = 10;
 	const echelleJSX = [];
-	const color = props.color;
 
-	const circleStyle = {
-		width: 15,
-		height: 15,
-		borderRadius: '50%',
-		marginLeft: '1px',
-		border: `1px solid ${color}`
-	};
 	const containerStyle = {
 		display: 'flex'
 	};
 
-
 	for (let i = 0 ; i < props.level ; i++) {
-		const style = {};
-		Object.assign(style, circleStyle);
-
 		echelleJSX.push(
-			<div style={{...circleStyle, backgroundColor: color}} key={i}></div>
+			<Circle full key={i} />
 		);
 	}
 	for (let i = props.level ; i < echelle ; i++) {
 		echelleJSX.push(
-			<div style={circleStyle} key={i}></div>
+			<Circle key={i} />
 		);
 	}
 
 	return (
-		<div className="scale" style={containerStyle}>{echelleJSX}</div>
+		<div style={containerStyle}>{echelleJSX}</div>
 	);
 }
 
-export default Scale
+export default Scale;

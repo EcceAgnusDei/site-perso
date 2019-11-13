@@ -1,37 +1,67 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import PictureContainer from 'elements/PictureContainer';
 import Separator from 'elements/Separator';
 
 import FullArticle from './FullArticle';
-import './Article.css';
 
-function Article(props) {
-	const {title, subtitle, img, text, link, imgMin, github} = props;
+const StyledDiv = styled.div`
+	width: 100%;
+	height: 240px;
+	cursor: pointer;
+	margin-bottom: 24px;
+`;
+
+const Content = styled.div`
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 100%;
+	height: 100%;
+	display: flex;
+	color: white;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	transition: all 200ms linear;
+
+	@media (hover: hover) {
+		opacity: 0;
+	}
+
+	&:hover {
+		opacity: 1;
+	}
+`;
+
+const Title = styled.div`
+	text-align: center;
+`;
+
+function Article({title, subtitle, img, text, link, imgMin, github, click}) {
 
 	return (
-		<div className="article" onClick={() => props.click(
-			<FullArticle 
+		<StyledDiv onClick={() => click(
+			(<FullArticle 
 				title={title}
 				subtitle={subtitle}
 				text={text}
 				link={link}
 				github={github}
 				img={img}
-			/>
+			/>),'portfolio'
 		)}>
-			<PictureContainer url={imgMin}>
-				<div className="content">
-					<div className="title">
+			<PictureContainer height="100%" url={imgMin}>
+				<Content>
+					<Title>
 						{title}
-					</div>
+					</Title>
 					<Separator />
 					<div className="subtitle">
 						{subtitle}
 					</div>
-				</div>
+				</Content>
 			</PictureContainer>
-		</div>
+		</StyledDiv>
 	);
 }
 

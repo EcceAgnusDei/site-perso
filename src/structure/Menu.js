@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import './Menu.css';
+import styled from 'styled-components';
 
 String.prototype.sansAccent = function(){
     var accent = [
@@ -20,6 +20,36 @@ String.prototype.sansAccent = function(){
      
     return str;
 }
+
+const MenuItem = styled.a`
+	text-decoration: none;
+	text-transform: uppercase;
+	color: ${props => props.current ? props.theme.primary : props.theme.black};
+	font-size: 0.9em;
+  	transition: all 100ms linear;
+  	margin-left: 12px;
+
+  	&:hover {
+  		color: ${props => props.theme.primary}
+  	}
+`;
+
+const StyledNav = styled.nav`
+	align-items: center;
+	${props => props.vertical && 'height: 100%;'}
+	
+	& ul {
+		margin: 0;
+		display: flex;
+		align-items: center;
+		justify-content: ${props => props.vertical ? 'space-around' : 'space-between'};
+		${props => props.vertical && `
+			flex-direction: column;
+			height: 100%;
+			width: 100%;
+		`}
+	}
+`;
 
 function Menu(props) {
 	const [activePage, setActivePage] = useState('Accueil');
@@ -66,34 +96,21 @@ function Menu(props) {
 		pagesId.push(id);
 		return (
 		<li key={item.props.children}>
-			<a 
-				className={activePage === id ? "menu-item current ml-4" : "menu-item ml-4"}
-				href={`#${id}`}
-			>
+			<MenuItem current={activePage === id} href={`#${id}`}>
 				{item.props.children}
-			</a>
+			</MenuItem>
 		</li>
 		)
 	})
 
-	if (props.vertical) {
-		return (
-			<nav className="d-flex justify-content-center h-100">
-				<ul className="vertical">
-					{menuJSX}
-				</ul>
-			</nav>
-		);
-	} else {
-		return (
-			<nav className="d-none d-md-flex align-items-center">
-				<ul className="d-flex justify-content-between m-0">
-					{menuJSX}
-				</ul>
-			</nav>
-		);
-	}
 	
+	return (
+		<StyledNav vertical={props.vertical} className={props.vertical ? 'd-flex' : 'd-none d-md-flex'}>
+			<ul>
+				{menuJSX}
+			</ul>
+		</StyledNav>
+	);
 }
 
 export default Menu

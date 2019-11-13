@@ -1,21 +1,35 @@
 import React from 'react';
-import Menu from './Menu';
+import styled from 'styled-components';
+
 import BurgerButton from 'elements/BurgerButton';
-import './Header.css';
+import FlexContainer from 'elements/FlexContainer';
+
+import Menu from './Menu';
+
+const StyledHeader = styled.header`
+	min-height: 70px;
+	width: 100%;
+	box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.5);
+	display: flex;
+	align-items: center;
+	position: fixed; 
+	z-index: 500;
+	background-color: ${props => props.theme.light};
+`;
 
 function Header(props) {
 	return (
-		<header>
-			<div className="container d-flex justify-content-between">
+		<StyledHeader>
+			<FlexContainer>
 			{props.logo}
 				<BurgerButton click={() => props.burgerClick(
-					<Menu vertical>
+					(<Menu vertical>
 				        <li>accueil</li>
 				        <li>à propos</li>
 				        <li>compétences</li>
 				        <li>portfolio</li>
 				        <li>contact</li>
-					</Menu>
+					</Menu>), 'menu'
 				)}/>
 				<Menu>
 			        <li>accueil</li>
@@ -24,8 +38,8 @@ function Header(props) {
 			        <li>portfolio</li>
 			        <li>contact</li>
 				</Menu>
-			</div>
-      	</header>
+			</FlexContainer>
+      	</StyledHeader>
 	);
 }
 

@@ -1,22 +1,29 @@
 import React from 'react';
 
-function PictureContainer(props) {
-	const width = props.width ? props.width : '100%';
-	const height = props.height ? props.height : '100%';
+function PictureContainer({ width, height, url, children, shadow, mH}) {
 	
 	const style = {
 		width: width,
 		height: height,
-		backgroundImage: `url(${props.url})`,
+		minHeight: mH,
+		backgroundImage: `url(${url})`,
 		backgroundSize: 'cover',
-		backgroundPosition: 'center top'
+		backgroundPosition: 'center top',
+		boxShadow: shadow ? '0px 2px 9px 0px rgba(0, 0, 0, 0.5)' : 'none',
+		flex: 1
 	};
 
 	return (
-		<div className="picture" style={style}>
-			{props.children}
+		<div style={style}>
+			{children}
 		</div>
 	);
+}
+
+PictureContainer.defaultProps = {
+	width: 'auto',
+	height: 'auto',
+	mH: '0px'
 }
 
 export default PictureContainer;

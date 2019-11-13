@@ -1,19 +1,22 @@
-import React from 'react'
+import React from 'react';
+import styled from 'styled-components';
+
+const Underline = styled.div`
+	height: 3px;
+	width: 50px;
+	margin-bottom: 24px;
+	background-color: ${props => props.theme.primary};
+`;
 
 function Title2(props) {
 	const headerStyle = {
 		marginBottom: 0
 	}
 
-	const underline = {
-		height: 3,
-		width: 50,
-		marginBottom: 24
-	}
 	return (
 		<React.Fragment>
 			<h2 style={headerStyle}>{props.children}</h2>
-			<div style={underline} className="title-underline"/>
+			<Underline />
 		</React.Fragment>
 	);
 }

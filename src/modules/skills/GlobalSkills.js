@@ -1,18 +1,29 @@
-import React from 'react'
+import React from 'react';
+import styled from 'styled-components';
+
+const Item = styled.div`
+	margin-top: 7px;
+`;
+
+const StyledDiv = styled.div`
+	&:first-child {
+		margin-bottom: 33px;
+	}
+`;
 
 function GlobalSkills(props) {
-	const globalSkillsJSX = props.children.map(item =>
-		<div className="globalSkills-item" key={item.titre}>
+	const globalSkillsJSX = props.children.map((item, index) =>
+		<Item key={index}>
 			<strong>{item.titre}</strong>
 			<br/>
 			<em>{item.text}</em>
-		</div>
+		</Item>
 	)
 	return (
-		<div className="globalSkills-container">
+		<StyledDiv>
 			<h3>{props.title}</h3>
 			{globalSkillsJSX}
-		</div>
+		</StyledDiv>
 	);
 }
 

@@ -2,7 +2,6 @@ import React from 'react';
 
 import Title from 'elements/Title2';
 
-import Showroom from './Showroom';
 import Article from './Article';
 
 function Portfolio(props) {
@@ -25,9 +24,9 @@ function Portfolio(props) {
 		<section id="portfolio">
 			<div className="container">
 				<Title>portfolio</Title>
-				<Showroom>
+				<div className="row">
 					{articlesJSX}
-				</Showroom>
+				</div>
 			</div>
 		</section>
 	);

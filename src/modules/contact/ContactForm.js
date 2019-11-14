@@ -4,7 +4,9 @@ import styled from 'styled-components';
 import TextField from '@material-ui/core/TextField';
 import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
-import InputAdornment from '@material-ui/core/InputAdornment';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import { withStyles } from '@material-ui/core/styles';
+import theme from 'theme'
 
 
 import Button from 'elements/Button';
@@ -17,6 +19,21 @@ const StyledLabel = styled.div`
 	}
 `;
 
+const StyledField = withStyles({
+	root: {
+	    '& .MuiOutlinedInput-root': {
+	      '&:hover fieldset': {
+	        borderColor: theme.primary,
+	      }
+	    }
+	}
+})(TextField);
+
+function validateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
 class ContactForm extends Component {
 	constructor(props) {
 		super(props);
@@ -26,40 +43,51 @@ class ContactForm extends Component {
 			email: '',
 			phoneNumber: '',
 			message: '',
+			sent: false,
+			submited: false,
 			legal: false
 		};
 	}
 
 	handleSubmit = (event) => {
 		event.preventDefault();
-		let tempState = 'error';
-		const {name, email, phoneNumber, message} = event.target;
 
-		fetch('/API/contactMail.php', {
-			method: 'POST',
-			body: JSON.stringify([name.value, email.value, phoneNumber.value, message.value])
-		})
-		.then(response => response.json())
-		.then((json) => {
-			if(json === true) {
-				this.setState({
-					alert: 'success',
-					name: '',
-					submited: false,
-					email: '',
-					phoneNumber: '',
-					message: '',
-					legal: false
-				});
-				tempState = 'success';
-			}
-		})
+		this.setState({ submited: true })
 
-		setTimeout(() => {
-			if (tempState === 'error') {
-				this.setState({alert: 'error'})
-			}
-		}, 3000);
+		const {name, email, phoneNumber, message} = this.state;
+		console.log(name, email, message);
+
+		if(name && validateEmail(email) && message) {
+			this.setState({ sent: true })
+			let tempState = 'error';
+
+			fetch('/API/contactMail.php', {
+				method: 'POST',
+				body: JSON.stringify([name, email, phoneNumber, message])
+			})
+			.then(response => response.json())
+			.then((json) => {
+				if(json === true) {
+					this.setState({
+						alert: 'success',
+						name: '',
+						sent: false,
+						submited: false,
+						email: '',
+						phoneNumber: '',
+						message: '',
+						legal: false
+					});
+					tempState = 'success';
+				}
+			})
+
+			setTimeout(() => {
+				if (tempState === 'error') {
+					this.setState({alert: 'error', submited: false, sent: false})
+				}
+			}, 3000);
+		}
 	}
 
 	handleChange = (event) => {
@@ -79,57 +107,48 @@ class ContactForm extends Component {
 					className={this.state.submited ? "was-validated" : ""}
 					id="contact-form"
 				>
-					<TextField
-						margin="normal"
+					<StyledField
+						error={this.state.submited && this.state.name.length === 0}
+						variant="outlined"
+						margin="dense"
 						fullWidth
 						type="text" 
 						name="name" 
-						placeholder="Nom et Prénom" 
-						aria-label="Nom"
+						label="Nom et Prénom *"
 						onChange={this.handleChange}
 						value={this.state.name}
-						required
-						InputProps={{
-							startAdornment: <InputAdornment position="start">*</InputAdornment>,
-						}}
 					/>
-					<TextField
-						margin="normal"
+					<StyledField
+						error={this.state.submited && !validateEmail(this.state.email)}
+						variant="outlined"
+						margin="dense"
 						fullWidth
 						type="email" 
 						name="email" 
-						placeholder="E-mail" 
-						aria-label="email"
+						label="E-mail *"
 						onChange={this.handleChange}
 						value={this.state.email}
-						required
-						InputProps={{
-							startAdornment: <InputAdornment position="start">*</InputAdornment>,
-						}}
 					/>
-					<TextField
-						margin="normal"
+					<StyledField
+						variant="outlined"
+						margin="dense"
 						fullWidth
 						type="text" 
 						name="phoneNumber" 
-						placeholder="Téléphone" 
-						aria-label="téléphone"
+						label="Téléphone"
 						onChange={this.handleChange}
 						value={this.state.phoneNumber}
 					/>
-					<TextField
+					<StyledField
+						error={this.state.submited && this.state.message.length === 0}
+						variant="outlined"
 						margin="normal"
 						fullWidth
 						multiline
 						name="message" 
-						placeholder="Méssage" 
-						aria-label="message"
+						label="Message *"
 						onChange={this.handleChange}
 						value={this.state.message}
-						required
-						InputProps={{
-							startAdornment: <InputAdornment position="start">*</InputAdornment>,
-						}}
 					/>
 					<StyledLabel>
 						<FormControlLabel
@@ -148,13 +167,17 @@ class ContactForm extends Component {
 							labelPlacement="end"
 						/>
 					</StyledLabel>
-					<Button 
-						onClick={() => {
-								this.setState({submited: true});
-							}	
-						}
-					>Envoyer
-					</Button>
+					{this.state.sent ? (
+						<CircularProgress />
+					) : (
+						<Button 
+							onClick={() => {
+									this.setState({submited: true});
+								}	
+							}
+						>Envoyer
+						</Button>
+					)}
 				</form>
 				{this.state.alert === 'success' &&
 				<Alert click={this.closeAlert}>

@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Container from '@material-ui/core/Container';
+
 import Title from 'elements/Title2';
 
 import Article from './Article';
@@ -22,12 +24,12 @@ function Portfolio(props) {
 		);
 	return (
 		<section id="portfolio">
-			<div className="container">
+			<Container>
 				<Title>portfolio</Title>
 				<div className="row">
 					{articlesJSX}
 				</div>
-			</div>
+			</Container>
 		</section>
 	);
 }

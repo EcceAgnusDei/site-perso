@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Container from '@material-ui/core/Container';
+
 import about from 'libs/aboutMe';
 import profil from 'assets/img/profil.jpg';
 import Title from 'elements/Title2.js';
@@ -12,7 +14,7 @@ const StyledImg = styled.img`
 	box-shadow: 0px 5px 9px 0px rgba(0, 0, 0, 0.5);
 `;
 
-const StyledDiv = styled.div`
+const StyledAnchors = styled.div`
 	& a {
 		color: ${props => props.theme.primary}
 	}
@@ -24,7 +26,7 @@ function AboutMe() {
 	})
 	return (
 		<section id="apropos">
-			<StyledDiv className="container">
+			<Container>
 				<Title>à propos</Title>
 				<div className="row">
 					<div className="col-12 col-md-3 d-flex flex-column align-items-center">
@@ -39,11 +41,11 @@ function AboutMe() {
 							</Button>
 						</a>
 					</div>
-					<div className="col-12 col-md-9">
+					<StyledAnchors className="col-12 col-md-9">
 						{aboutJSX}
-					</div>
+					</StyledAnchors>
 				</div>
-			</StyledDiv>
+			</Container>
 		</section>
 	);
 }

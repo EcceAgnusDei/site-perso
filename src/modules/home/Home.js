@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Container from '@material-ui/core/Container';
+
 import MainLinks from 'elements/MainLinks';
 import Separator from 'elements/Separator';
 import theme from 'theme';
@@ -31,14 +33,14 @@ const Title = styled.h1`
 function Home() {
 	return (
 		<StyledSection id="accueil">
-			<div className="container">
+			<Container>
 				<TitleContainer>
 					<Name>Antoine Mondoloni</Name>
 					<Separator />
 					<Title>développeur web front-end react.js</Title>
 				</TitleContainer>
 				<MainLinks color={theme.primary} />
-			</div>	
+			</Container>	
 		</StyledSection>
 	);
 }

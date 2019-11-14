@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Container from '@material-ui/core/Container';
+
 import skillsList from 'libs/skills';
 import hardSkills from 'libs/hardSkills';
 import softSkills from 'libs/softSkills';
@@ -11,7 +13,7 @@ import ScaledSkills from './ScaledSkills';
 function Tools(props) {
 	return (
 		<section id="competences">
-			<div className="container">
+			<Container>
 				<Title>compétences</Title>
 				<div className="row">
 					<ScaledSkills title="Compétences techniques">
@@ -26,7 +28,7 @@ function Tools(props) {
 						</GlobalSkills>
 					</div>
 				</div>
-			</div>		
+			</Container>		
 		</section>
 	);
 }

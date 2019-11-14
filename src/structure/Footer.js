@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Container from '@material-ui/core/Container';
+
 import MainLinks from 'elements/MainLinks';
 import FlexContainer from 'elements/FlexContainer';
 import theme from 'theme';
@@ -18,6 +20,8 @@ const FooterTop = styled.div`
 const FooterBottom = styled.div`
 	background-color: ${props => props.theme.darkGrey};
 	height: 80px;
+	display: flex;
+	alignItems: center;
 
 	@media (max-width: ${props => props.theme.sm})
 	{
@@ -33,19 +37,19 @@ function Footer() {
 	return (
 		<StyledFooter>
 			<FooterTop>
-				<FlexContainer>
-					<MainLinks color={theme.lightGrey}/>
-				</FlexContainer>
+				<MainLinks color={theme.lightGrey}/>
 			</FooterTop>
 			<FooterBottom>
-				<FlexContainer>
-						<div>&copy;Antoine Mondoloni 2019</div>
-						<a 
-							href="http://mondoloni-dev.fr/legal/legalNotice.html" 
-							target="_blank" 
-							rel="noopener noreferrer">Mentions légales
-						</a>
-				</FlexContainer>
+				<Container>
+					<FlexContainer>
+							<div>&copy;Antoine Mondoloni 2019</div>
+							<a 
+								href="http://mondoloni-dev.fr/legal/legalNotice.html" 
+								target="_blank" 
+								rel="noopener noreferrer">Mentions légales
+							</a>
+					</FlexContainer>
+				</Container>
 			</FooterBottom>
 		</StyledFooter>
 	);

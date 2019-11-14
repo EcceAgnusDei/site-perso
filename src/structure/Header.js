@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Container from '@material-ui/core/Container';
+
 import BurgerButton from 'elements/BurgerButton';
 import FlexContainer from 'elements/FlexContainer';
 
@@ -20,25 +22,27 @@ const StyledHeader = styled.header`
 function Header(props) {
 	return (
 		<StyledHeader>
-			<FlexContainer>
-			{props.logo}
-				<BurgerButton click={() => props.burgerClick(
-					(<Menu vertical>
+			<Container>
+				<FlexContainer>
+				{props.logo}
+					<BurgerButton click={() => props.burgerClick(
+						(<Menu vertical>
+					        <li>accueil</li>
+					        <li>à propos</li>
+					        <li>compétences</li>
+					        <li>portfolio</li>
+					        <li>contact</li>
+						</Menu>), 'menu'
+					)}/>
+					<Menu>
 				        <li>accueil</li>
 				        <li>à propos</li>
 				        <li>compétences</li>
 				        <li>portfolio</li>
 				        <li>contact</li>
-					</Menu>), 'menu'
-				)}/>
-				<Menu>
-			        <li>accueil</li>
-			        <li>à propos</li>
-			        <li>compétences</li>
-			        <li>portfolio</li>
-			        <li>contact</li>
-				</Menu>
-			</FlexContainer>
+					</Menu>
+				</FlexContainer>
+			</Container>
       	</StyledHeader>
 	);
 }

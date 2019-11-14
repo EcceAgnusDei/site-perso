@@ -1,9 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const FlexContainer = styled.div.attrs({
-  className: 'container'
-})`
+const FlexContainer = styled.div`
 	height: 100%;
 	display: flex;
 	${props => props.column && 'flex-direction: column;'}

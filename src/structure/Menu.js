@@ -52,7 +52,7 @@ const StyledNav = styled.nav`
 `;
 
 function Menu(props) {
-	const [activePage, setActivePage] = useState('Accueil');
+	const [activePage, setActivePage] = useState('accueil');
 	const yPosRef = useRef(0);
 	const pagesId = [];
 	let pagesY;

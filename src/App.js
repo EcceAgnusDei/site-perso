@@ -32,7 +32,6 @@ class App extends Component {
 			sideDrawerOpen: false,
 			drawerContent: null
 		};
-		this.isMobileDevice = (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
 	}
 
 	drawerClickHandler = () => {

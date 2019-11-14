@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Container from '@material-ui/core/Container';
+import Grid from '@material-ui/core/Grid';
 
 import Title from 'elements/Title2';
 
@@ -8,7 +9,7 @@ import Article from './Article';
 
 function Portfolio(props) {
 	const articlesJSX = props.children.map(item =>
-		<div className="offset-2 offset-sm-0 col-8 col-sm-6 col-md-4 col-lg-3" key={item.title}>
+		<Grid item xs={10} sm={6} md={4} lg={3} key={item.title}>
 			<Article 
 				title={item.title}
 				subtitle={item.subtitle}
@@ -20,15 +21,15 @@ function Portfolio(props) {
 				key={item.title} 
 				click={props.articleClickHandler}
 			/>
-		</div>
+		</Grid>
 		);
 	return (
 		<section id="portfolio">
 			<Container>
 				<Title>portfolio</Title>
-				<div className="row">
+				<Grid container justify="center" spacing={2}>
 					{articlesJSX}
-				</div>
+				</Grid>
 			</Container>
 		</section>
 	);

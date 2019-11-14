@@ -60,7 +60,7 @@ class ContactForm extends Component {
 	
 	render() {
 		return (
-			<div className={this.props.bootstrapClass}>
+			<>
 				<form 
 					onSubmit={this.handleSubmit} 
 					className={this.state.submited ? "was-validated" : ""}
@@ -156,7 +156,7 @@ class ContactForm extends Component {
 				<Alert click={this.closeAlert}>
 					Désolé, il y a eu un problème...
 				</Alert>}
-			</div>
+			</>
 		);
 	}
 }

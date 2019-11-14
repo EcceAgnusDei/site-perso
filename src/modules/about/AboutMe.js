@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Container from '@material-ui/core/Container';
+import Grid from '@material-ui/core/Grid';
 
 import about from 'libs/aboutMe';
 import profil from 'assets/img/profil.jpg';
@@ -28,8 +29,15 @@ function AboutMe() {
 		<section id="apropos">
 			<Container>
 				<Title>à propos</Title>
-				<div className="row">
-					<div className="col-12 col-md-3 d-flex flex-column align-items-center">
+				<Grid container>
+					<Grid 
+						container
+						item
+						direction="column" 
+						alignItems="center"
+						xs={12}
+						md={3}
+					>
 						<StyledImg src={profil} alt=""/>
 						<a 
 							target="_blank" 
@@ -40,11 +48,13 @@ function AboutMe() {
 								Télécharger mon CV
 							</Button>
 						</a>
-					</div>
-					<StyledAnchors className="col-12 col-md-9">
-						{aboutJSX}
-					</StyledAnchors>
-				</div>
+					</Grid>
+					<Grid item xs={12} md={9}>
+						<StyledAnchors>
+							{aboutJSX}
+						</StyledAnchors>
+					</Grid>
+				</Grid>
 			</Container>
 		</section>
 	);

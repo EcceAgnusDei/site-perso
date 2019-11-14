@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Container from '@material-ui/core/Container';
+import Grid from '@material-ui/core/Grid';
 
 import Title from 'elements/Title2';
 
@@ -12,10 +13,14 @@ function Contact() {
 		<section id="contact">
 			<Container>
 				<Title>contactez-moi</Title>
-				<div className="row">
-					<Info bootstrapClass="contact_info col-12 col-md-6"/>
-					<Form bootstrapClass="col-12 col-md-6"/>
-				</div>
+				<Grid container>
+					<Grid item xs={12} md={6}>
+						<Info bootstrapClass="contact_info" />
+					</Grid>
+					<Grid item xs={12} md={6}>
+						<Form />
+					</Grid>
+				</Grid>
 			</Container>
 		</section>
 	);

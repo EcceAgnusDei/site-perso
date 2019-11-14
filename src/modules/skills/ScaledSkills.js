@@ -18,7 +18,7 @@ function ScaledSkills(props) {
 		</div>
 	)
 	return (
-		<StyledDiv className="col-12 col-md-4">
+		<StyledDiv>
 			<h3>{props.title}</h3>
 			<div className={`flex-fill 
 				d-flex 

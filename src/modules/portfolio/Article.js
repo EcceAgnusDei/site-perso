@@ -10,7 +10,6 @@ const StyledDiv = styled.div`
 	width: 100%;
 	height: 240px;
 	cursor: pointer;
-	margin-bottom: 24px;
 `;
 
 const Content = styled.div`

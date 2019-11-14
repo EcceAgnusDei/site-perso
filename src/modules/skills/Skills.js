@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Container from '@material-ui/core/Container';
+import Grid from '@material-ui/core/Grid';
 
 import skillsList from 'libs/skills';
 import hardSkills from 'libs/hardSkills';
@@ -15,19 +16,21 @@ function Tools(props) {
 		<section id="competences">
 			<Container>
 				<Title>compétences</Title>
-				<div className="row">
-					<ScaledSkills title="Compétences techniques">
-						{skillsList}
-					</ScaledSkills>
-					<div className="col-12 col-md-8 mt-5 mt-md-0">
+				<Grid container>
+					<Grid item xs={12} md={4}>
+						<ScaledSkills title="Compétences techniques">
+							{skillsList}
+						</ScaledSkills>
+					</Grid>
+					<Grid item xs={12} md={8}>
 						<GlobalSkills title="Savoir faire">
 							{hardSkills}
 						</GlobalSkills>
 						<GlobalSkills title="Savoir être">
 							{softSkills}
 						</GlobalSkills>
-					</div>
-				</div>
+					</Grid>
+				</Grid>
 			</Container>		
 		</section>
 	);

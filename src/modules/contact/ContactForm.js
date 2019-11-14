@@ -1,8 +1,21 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
+
+import TextField from '@material-ui/core/TextField';
+import Checkbox from '@material-ui/core/Checkbox';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import InputAdornment from '@material-ui/core/InputAdornment';
+
 
 import Button from 'elements/Button';
 
 import Alert from './Alert';
+
+const StyledLabel = styled.div`
+	& label span {
+		font-size: 0.8rem;
+	}
+`;
 
 class ContactForm extends Component {
 	constructor(props) {
@@ -66,80 +79,75 @@ class ContactForm extends Component {
 					className={this.state.submited ? "was-validated" : ""}
 					id="contact-form"
 				>
-					<div className="input-group form-group">
-						<div className="input-group-prepend">
-							<span className="input-group-text">*</span>
-						</div>
-						<input 
-							type="text" 
-							name="name" 
-							placeholder="Nom et Prénom" 
-							aria-label="Nom"
-							onChange={this.handleChange}
-							value={this.state.name}
-							className="form-control"
-							required
+					<TextField
+						margin="normal"
+						fullWidth
+						type="text" 
+						name="name" 
+						placeholder="Nom et Prénom" 
+						aria-label="Nom"
+						onChange={this.handleChange}
+						value={this.state.name}
+						required
+						InputProps={{
+							startAdornment: <InputAdornment position="start">*</InputAdornment>,
+						}}
+					/>
+					<TextField
+						margin="normal"
+						fullWidth
+						type="email" 
+						name="email" 
+						placeholder="E-mail" 
+						aria-label="email"
+						onChange={this.handleChange}
+						value={this.state.email}
+						required
+						InputProps={{
+							startAdornment: <InputAdornment position="start">*</InputAdornment>,
+						}}
+					/>
+					<TextField
+						margin="normal"
+						fullWidth
+						type="text" 
+						name="phoneNumber" 
+						placeholder="Téléphone" 
+						aria-label="téléphone"
+						onChange={this.handleChange}
+						value={this.state.phoneNumber}
+					/>
+					<TextField
+						margin="normal"
+						fullWidth
+						multiline
+						name="message" 
+						placeholder="Méssage" 
+						aria-label="message"
+						onChange={this.handleChange}
+						value={this.state.message}
+						required
+						InputProps={{
+							startAdornment: <InputAdornment position="start">*</InputAdornment>,
+						}}
+					/>
+					<StyledLabel>
+						<FormControlLabel
+							control={
+								<Checkbox  
+									name="legal"
+									color="primary"
+									id="checkAgreement"
+									onChange={this.handleChange}
+									checked={this.state.legal}
+									required
+								/>
+							}
+							label={`En soumettant ce formulaire, j'accepte que les informations 
+							saisies soient utilisées pour me recontacter.`}
+							labelPlacement="end"
 						/>
-					</div>
-					<div className="input-group form-group">
-						<div className="input-group-prepend">
-							<span className="input-group-text">*</span>
-						</div>
-						<input 
-							type="email" 
-							name="email" 
-							placeholder="E-mail" 
-							aria-label="email"
-							onChange={this.handleChange}
-							value={this.state.email}
-							className="form-control"
-							required
-						/>
-					</div>
-					<div className="form-group">
-						<input 
-							type="text" 
-							name="phoneNumber" 
-							placeholder="Téléphone" 
-							aria-label="téléphone"
-							onChange={this.handleChange}
-							value={this.state.phoneNumber}
-							className="form-control"
-						/>
-					</div>
-					<div className="input-group form-group">
-						<div className="input-group-prepend">
-							<span className="input-group-text">*</span>
-						</div>
-						<textarea
-							name="message" 
-							placeholder="Méssage" 
-							aria-label="message"
-							onChange={this.handleChange}
-							value={this.state.message}
-							className="form-control"
-							required
-						/>
-					</div>
-					<div className="form-check">
-						<input 
-							type="checkbox" 
-							name="legal"
-							id="checkAgreement"
-							className="form-check-input"
-							onChange={this.handleChange}
-							checked={this.state.legal}
-							required
-						/>
-						<label 
-							htmlFor="checkAgreement" 
-							className="form-check-label"
-							style={{fontSize: '0.7em'}}
-						>
-							En soumettant ce formulaire, j'accepte que les informations 
-							saisies soient utilisées pour me recontacter.
-						</label>
-					</div>
+					</StyledLabel>
 					<Button 
 						onClick={() => {
 								this.setState({submited: true});

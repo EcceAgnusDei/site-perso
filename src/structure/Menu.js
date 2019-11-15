@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 
+import Hidden from '@material-ui/core/Hidden';
+
 String.prototype.sansAccent = function(){
     var accent = [
         /[\300-\306]/g, /[\340-\346]/g, // A, a
@@ -37,7 +39,7 @@ const MenuItem = styled.a`
 const StyledNav = styled.nav`
 	align-items: center;
 	${props => props.vertical && 'height: 100%;'}
-	
+	display: flex;
 	& ul {
 		margin: 0;
 		display: flex;
@@ -105,11 +107,13 @@ function Menu(props) {
 
 	
 	return (
-		<StyledNav vertical={props.vertical} className={props.vertical ? 'd-flex' : 'd-none d-md-flex'}>
-			<ul>
-				{menuJSX}
-			</ul>
-		</StyledNav>
+		<Hidden smDown={!props.vertical}>
+			<StyledNav vertical={props.vertical}>
+				<ul>
+					{menuJSX}
+				</ul>
+			</StyledNav>
+		</Hidden>
 	);
 }
 

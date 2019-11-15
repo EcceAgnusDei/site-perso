@@ -5,6 +5,7 @@ import styled from 'styled-components';
 const StyledDiv = styled.div`
 	margin: auto;
 	display: flex;
+	align-items: center;
 	justify-content: space-around;
 	width: 230px; 
 	text-transform: uppercase;
@@ -42,7 +43,7 @@ function MainLinks(props) {
 				target="_blank"
 				href="http://mondoloni-dev.fr/CV_antoine_mondoloni.pdf"
 				rel="noopener noreferrer"
-				style={{paddingTop: 3}}
+				style={{paddingTop: 5}}
 			>
 				cv
 			</a>

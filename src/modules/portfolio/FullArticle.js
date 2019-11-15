@@ -27,8 +27,8 @@ const BtnWrapper = styled.div`
 function FullArticle({title, subtitle, text, link, img, github}) {
 	return (
 		<StyledDiv>
-			<div className="title">{title} - {subtitle}</div>
-			<div className="paragraph">{text}</div>
+			<div>{title} - {subtitle}</div>
+			<div>{text}</div>
 			{img &&
 			<PictureContainer width='100%' mH='300px' shadow url={img}/>}
 			<BtnWrapper>
@@ -53,4 +53,4 @@ function FullArticle({title, subtitle, text, link, img, github}) {
 	);
 }
 
-export default FullArticle
+export default FullArticle;

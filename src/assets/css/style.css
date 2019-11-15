@@ -68,3 +68,8 @@ input, textarea
 {
   box-shadow: none;
 }
+
+svg 
+{
+  vertical-align: middle;
+}

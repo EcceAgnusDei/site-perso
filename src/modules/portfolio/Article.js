@@ -55,7 +55,7 @@ function Article({title, subtitle, img, text, link, imgMin, github, click}) {
 						{title}
 					</Title>
 					<Separator />
-					<div className="subtitle">
+					<div>
 						{subtitle}
 					</div>
 				</Content>
@@ -64,4 +64,4 @@ function Article({title, subtitle, img, text, link, imgMin, github, click}) {
 	);
 }
 
-export default Article
+export default Article;

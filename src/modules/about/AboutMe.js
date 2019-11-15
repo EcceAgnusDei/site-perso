@@ -29,14 +29,15 @@ function AboutMe() {
 		<section id="apropos">
 			<Container>
 				<Title>à propos</Title>
-				<Grid container>
+				<Grid container spacing={1}>
 					<Grid 
 						container
 						item
 						direction="column" 
 						alignItems="center"
 						xs={12}
-						md={3}
+						md={4}
+						lg={3}
 					>
 						<StyledImg src={profil} alt=""/>
 						<a 
@@ -49,7 +50,7 @@ function AboutMe() {
 							</Button>
 						</a>
 					</Grid>
-					<Grid item xs={12} md={9}>
+					<Grid item xs={12} md={8} lg={9}>
 						<StyledAnchors>
 							{aboutJSX}
 						</StyledAnchors>

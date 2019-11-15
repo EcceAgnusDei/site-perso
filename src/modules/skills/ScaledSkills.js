@@ -5,30 +5,48 @@ import Scale from './Scale';
 
 const StyledDiv = styled.div`
 	min-height: 500px;
+	height: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 `;
 
+const StyledParagraph = styled.p`
+	margin: 0;
+	text-align: center;
+	@media (min-width: ${props => props.theme.md}) {
+		text-align: left;
+	}
+`;
+
+const LanguagesContainer = styled.div`
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	@media (min-width: ${props => props.theme.md}) {
+		align-items: start;
+	}
+`;
+
+const Language = styled.div`
+	margin-bottom: 12px;
+`;
+
 function ScaledSkills(props) {
 	const langagesJSX = props.children.map((item, index) => 
-		<div key={index}>
-			<p className="m-0 text-center text-md-left">{item.nom}</p>
+		<Language key={index}>
+			<StyledParagraph>{item.nom}</StyledParagraph>
 			<Scale level={item.niveau} />
-		</div>
+		</Language>
 	)
 	return (
 		<StyledDiv>
 			<h3>{props.title}</h3>
-			<div className={`flex-fill 
-				d-flex 
-				flex-column 
-				align-items-center 
-				align-items-md-start 
-				justify-content-between`}
-			>
+			<LanguagesContainer>
 				{langagesJSX}
-			</div>
+			</LanguagesContainer>
 		</StyledDiv>
 	);
 }

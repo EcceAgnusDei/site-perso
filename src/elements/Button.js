@@ -9,6 +9,9 @@ const StyledButton = styled.button`
 	border: 2px ${props => props.theme.primary} solid;
 	margin: 12px 0;
 	transition: all 200ms linear;
+	font-size: 1em;
+	font-family: inherit;
+	white-space: nowrap;
 
 	&:hover {
 		background-color: ${props => props.theme.primary};

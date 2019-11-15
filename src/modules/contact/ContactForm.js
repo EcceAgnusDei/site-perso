@@ -29,6 +29,11 @@ const StyledField = withStyles({
 	}
 })(TextField);
 
+const StyledForm = styled.form`
+	max-width: 520px;
+	margin: auto;
+`;
+
 function validateEmail(email) {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
@@ -102,9 +107,8 @@ class ContactForm extends Component {
 	render() {
 		return (
 			<>
-				<form 
-					onSubmit={this.handleSubmit} 
-					className={this.state.submited ? "was-validated" : ""}
+				<StyledForm 
+					onSubmit={this.handleSubmit}
 					id="contact-form"
 				>
 					<StyledField
@@ -178,7 +182,7 @@ class ContactForm extends Component {
 						>Envoyer
 						</Button>
 					)}
-				</form>
+				</StyledForm>
 				{this.state.alert === 'success' &&
 				<Alert click={this.closeAlert}>
 					Merci, votre message à bien été envoyé !
@@ -192,4 +196,4 @@ class ContactForm extends Component {
 	}
 }
 
-export default ContactForm
+export default ContactForm;

@@ -1,7 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Hidden from '@material-ui/core/Hidden';
+
 const StyledButton = styled.div`
+	display: flex;
 	background-color: transparent;
 	height: 48px;
 	width: 64px;
@@ -19,11 +22,13 @@ const StyledDiv = styled.div`
 
 function BurgerButton(props) {
 	return (
-		<StyledButton className="d-flex d-md-none" onClick={props.click}>
-			<StyledDiv />
-			<StyledDiv />
-			<StyledDiv />
-		</StyledButton>
+		<Hidden mdUp>
+			<StyledButton onClick={props.click}>
+				<StyledDiv />
+				<StyledDiv />
+				<StyledDiv />
+			</StyledButton>
+		</Hidden>
 	);
 }
 

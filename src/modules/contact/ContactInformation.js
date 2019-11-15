@@ -1,31 +1,45 @@
 import React from 'react';
+import {FaMapMarkerAlt, FaPhone, FaEnvelope} from 'react-icons/fa';
+import styled from 'styled-components';
+
+const StyledDiv = styled.div`
+	margin-bottom: 12px;
+`;
+
+const StyledTitle = styled.h4`
+	margin-bottom: 4px;
+`;
+
+const ItalicSpan = styled.span`
+	font-style: italic
+`;
 
 function ContactInformation(props) {
 	return (
-		<div className={props.bootstrapClass}>
-			<div className="mb-4">
-				<h4 className="mb-1">adresse</h4>
+		<>
+			<StyledDiv>
+				<StyledTitle>adresse</StyledTitle>
 				
-				<div className="contact_info-item-p">
-					<i className="fas fa-map-marked-alt"></i>
-					<span className="font-italic"> 16 rue Abel Tuffier 93330 Neuilly Sur Marne</span>
+				<div>
+					<FaMapMarkerAlt />
+					<ItalicSpan> 16 rue Abel Tuffier 93330 Neuilly Sur Marne</ItalicSpan>
 				</div>
-			</div>
-			<div className="mb-4">
-				<h4 className="mb-1">téléphone</h4>
-				<div className="contact_info-item-p">
-					<i className="fas fa-phone"></i>
-					<span className="font-italic"> 06.34.18.26.67</span>
+			</StyledDiv>
+			<StyledDiv>
+				<StyledTitle>téléphone</StyledTitle>
+				<div>
+					<FaPhone />
+					<ItalicSpan> 06.34.18.26.67</ItalicSpan>
 				</div>
-			</div>
-			<div className="mb-4">
-				<h4 className="mb-1">e-mail</h4>
-				<div className="contact_info-item-p">
-					<i className="far fa-envelope"></i>
-					<span className="font-italic"> mondo.antoine@yahoo.fr</span>
+			</StyledDiv>
+			<StyledDiv>
+				<StyledTitle>e-mail</StyledTitle>
+				<div>
+					<FaEnvelope />
+					<ItalicSpan> mondo.antoine@yahoo.fr</ItalicSpan>
 				</div>
-			</div>
-		</div>
+			</StyledDiv>
+		</>
 	);
 }
 

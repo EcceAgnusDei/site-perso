@@ -30,6 +30,15 @@ import theme from './theme';
 const muiTheme = createMuiTheme({
 	palette: {
 		primary: { main: theme.primary }
+	},
+	breakpoints: {
+		values: {
+			xs: 0,
+			sm: parseInt(theme.sm),
+			md: parseInt(theme.md),
+			lg: parseInt(theme.lg),
+			xl: parseInt(theme.xl)
+		}
 	}
 });
 

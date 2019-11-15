@@ -5,5 +5,8 @@ export default {
 	grey: '#555555',
 	darkGrey: '#333333',
 	black: '#121212',
-	sm: '540px'
+	sm: '520px',
+	md: '820px',
+	lg: '1220px',
+	xl: '1920px'
 }

@@ -12,6 +12,7 @@ const StyledButton = styled.button`
 	font-size: 1em;
 	font-family: inherit;
 	white-space: nowrap;
+	cursor: pointer;
 
 	&:hover {
 		background-color: ${props => props.theme.primary};

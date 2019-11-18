@@ -29,7 +29,7 @@ const listeLangages = [
 	},
 	{
 		nom: 'Git',
-		niveau: 5
+		niveau: 6
 	}
 ];
 

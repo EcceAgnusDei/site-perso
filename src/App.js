@@ -56,79 +56,55 @@ class App extends Component {
 			sideDrawerOpen: false,
 			drawerContent: null
 		});
-	}
+	};
 
 	drawe = (content, origin) => {
 		this.setState({
 			sideDrawerOpen: origin,
 			drawerContent: content
 		});
-	}
-	
+	};
+
 	render() {
 		let drawerWidth;
-		switch(this.state.sideDrawerOpen) {
+		switch (this.state.sideDrawerOpen) {
 			case 'menu':
-				drawerWidth='70%';
+				drawerWidth = '70%';
 				break;
 			case 'portfolio':
-				drawerWidth='90%';
+				drawerWidth = '90%';
 				break;
 			default:
-				drawerWidth='70%';
+				drawerWidth = '70%';
 		}
 		return (
-			<div style={{color: theme.black, backgroundColor: theme.light}}>
+			<div style={{ color: theme.black, backgroundColor: theme.light }}>
 				<MuiThemeProvider theme={muiTheme}>
 					<ThemeProvider theme={theme}>
-						<SideDrawer 
-							open={this.state.sideDrawerOpen ? true : false} 
+						<SideDrawer
+							open={this.state.sideDrawerOpen ? true : false}
 							backdropClick={this.drawerClickHandler}
 							width={drawerWidth}
 						>
-						{this.state.drawerContent}
+							{this.state.drawerContent}
 						</SideDrawer>
-				    	<Header 
-					    	burgerClick={this.drawe} 
-					    	logo={<Logo />}
-				    	/>
-				    	<Parallax
-				    		bgImage={background}
-				    		strength={200}
-				    	>
-				    		<Home/>
-				    	</Parallax>
-				    	<AboutMe />
-			    		<ProgressiveParallax
-				    		src={helloWorld}
-				    		placeHolder={helloWorldMicro}
-				    		height={300}
-				    		overlay
-			    		/>
-				    	<Skills />
-			    		<ProgressiveParallax
-				    		src={codingMan}
-				    		placeHolder={codingManMicro}
-				    		height={300}
-				    		overlay
-			    		/>
-				    	<Portfolio articleClickHandler={this.drawe}>
-				    		{projectList}
-				    	</Portfolio>
-			    		<ProgressiveParallax
-				    		src={cat}
-				    		placeHolder={catMicro}
-				    		height={300}
-				    		overlay
-			    		/>
-				    	<Contact />
-				    	<Footer />
-			    	</ThemeProvider>
-		    	</MuiThemeProvider>
-    		</div>
+						<Header burgerClick={this.drawe} logo={<Logo />} />
+						<Parallax bgImage={background} strength={200}>
+							<Home />
+						</Parallax>
+						<Skills />
+						<ProgressiveParallax src={codingMan} placeHolder={codingManMicro} height={300} overlay />
+						<Portfolio articleClickHandler={this.drawe}>{projectList}</Portfolio>
+						<ProgressiveParallax src={cat} placeHolder={catMicro} height={300} overlay />
+						<AboutMe />
+						<ProgressiveParallax src={helloWorld} placeHolder={helloWorldMicro} height={300} overlay />
+						<Contact />
+						<Footer />
+					</ThemeProvider>
+				</MuiThemeProvider>
+			</div>
 		);
 	}
 }
 
-export default App
-
+export default App;

@@ -4,10 +4,6 @@ const listeLangages = [
 		niveau: 6
 	},
 	{
-		nom: 'Bootstrap',
-		niveau: 6
-	},
-	{
 		nom: 'Javascript',
 		niveau: 6
 	},
@@ -17,6 +13,10 @@ const listeLangages = [
 	},
 	{
 		nom: 'Redux',
+		niveau: 6
+	},
+	{
+		nom: 'Bootstrap',
 		niveau: 6
 	},
 	{

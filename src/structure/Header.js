@@ -46,9 +46,9 @@ function Header(props) {
 							props.burgerClick(
 								<Menu vertical yPos={yPos}>
 									<li>accueil</li>
-									<li>à propos</li>
 									<li>compétences</li>
 									<li>portfolio</li>
+									<li>à propos</li>
 									<li>contact</li>
 								</Menu>,
 								'menu'
@@ -57,9 +57,9 @@ function Header(props) {
 					/>
 					<Menu yPos={yPos}>
 						<li>accueil</li>
-						<li>à propos</li>
 						<li>compétences</li>
 						<li>portfolio</li>
+						<li>à propos</li>
 						<li>contact</li>
 					</Menu>
 				</FlexContainer>

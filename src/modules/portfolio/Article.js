@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { isMobile, mobileVendor } from 'react-device-detect';
 
 import PictureContainer from 'elements/PictureContainer';
 import Separator from 'elements/Separator';
@@ -23,11 +24,17 @@ const Content = styled.div`
 	align-items: center;
 	transition: all 200ms linear;
 
-	@media (hover: hover) {
-		opacity: 0;
-	}
+	//@media (hover: hover) {
+	opacity: 0;
+	//}
+
+	${isMobile ? 'opacity: 1' : ''}
 
 	&:hover {
+		opacity: 1;
+	}
+
+	&:focus {
 		opacity: 1;
 	}
 `;
@@ -36,28 +43,21 @@ const Title = styled.div`
 	text-align: center;
 `;
 
-function Article({title, subtitle, img, text, link, imgMin, github, click}) {
-
+function Article({ title, subtitle, img, text, link, imgMin, github, click }) {
 	return (
-		<StyledDiv onClick={() => click(
-			(<FullArticle 
-				title={title}
-				subtitle={subtitle}
-				text={text}
-				link={link}
-				github={github}
-				img={img}
-			/>),'portfolio'
-		)}>
+		<StyledDiv
+			onClick={() =>
+				click(
+					<FullArticle title={title} subtitle={subtitle} text={text} link={link} github={github} img={img} />,
+					'portfolio'
+				)
+			}
+		>
 			<PictureContainer height="100%" url={imgMin}>
-				<Content>
-					<Title>
-						{title}
-					</Title>
+				<Content tabIndex="0">
+					<Title>{title}</Title>
 					<Separator />
-					<div>
-						{subtitle}
-					</div>
+					<div>{subtitle}</div>
 				</Content>
 			</PictureContainer>
 		</StyledDiv>

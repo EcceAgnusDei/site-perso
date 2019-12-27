@@ -1,6 +1,9 @@
 import React from 'react';
-import {FaMapMarkerAlt, FaPhone, FaEnvelope} from 'react-icons/fa';
 import styled from 'styled-components';
+
+import RoomIcon from '@material-ui/icons/Room';
+import PhoneIcon from '@material-ui/icons/Phone';
+import EmailIcon from '@material-ui/icons/Email';
 
 const StyledDiv = styled.div`
 	margin-bottom: 12px;
@@ -11,7 +14,7 @@ const StyledTitle = styled.h4`
 `;
 
 const ItalicSpan = styled.span`
-	font-style: italic
+	font-style: italic;
 `;
 
 function ContactInformation(props) {
@@ -19,23 +22,23 @@ function ContactInformation(props) {
 		<>
 			<StyledDiv>
 				<StyledTitle>adresse</StyledTitle>
-				
+
 				<div>
-					<FaMapMarkerAlt />
+					<RoomIcon color="primary" />
 					<ItalicSpan> 16 rue Abel Tuffier 93330 Neuilly Sur Marne</ItalicSpan>
 				</div>
 			</StyledDiv>
 			<StyledDiv>
 				<StyledTitle>téléphone</StyledTitle>
 				<div>
-					<FaPhone />
+					<PhoneIcon color="primary" />
 					<ItalicSpan> 06.34.18.26.67</ItalicSpan>
 				</div>
 			</StyledDiv>
 			<StyledDiv>
 				<StyledTitle>e-mail</StyledTitle>
 				<div>
-					<FaEnvelope />
+					<EmailIcon color="primary" />
 					<ItalicSpan> mondo.antoine@yahoo.fr</ItalicSpan>
 				</div>
 			</StyledDiv>
@@ -43,4 +46,4 @@ function ContactInformation(props) {
 	);
 }
 
-export default ContactInformation
+export default ContactInformation;

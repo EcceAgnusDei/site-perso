@@ -14,7 +14,7 @@ const StyledSection = styled.section`
 	flex-direction: column;
 	justify-content: center;
 	padding-top: 0;
-	background: linear-gradient(#FFFFFFFF,#FFFFFF77 80%,#FFFFFF77);
+	background: linear-gradient(#ffffffff, #ffffff77 80%, #ffffff77);
 `;
 
 const TitleContainer = styled.div`
@@ -26,8 +26,8 @@ const Name = styled.div`
 `;
 
 const Title = styled.h1`
-	margin-top: 0; 
-  	font-size: 2.3em;
+	margin-top: 0;
+	font-size: 2.3em;
 `;
 
 function Home() {
@@ -39,10 +39,10 @@ function Home() {
 					<Separator />
 					<Title>développeur web front-end react.js</Title>
 				</TitleContainer>
-				<MainLinks color={theme.primary} />
-			</Container>	
+				<MainLinks color={theme.primary} background="rgba(255,255,255, 0.5)" />
+			</Container>
 		</StyledSection>
 	);
 }
 
-export default Home
+export default Home;
